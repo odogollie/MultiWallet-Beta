@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>PORKCHOP</Machine>
+    <WindowsUser>Oliver</WindowsUser>
+    <TargetPlatformIdentifier>Windows Phone</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|ARM</SolutionConfiguration>
+    <PackageArchitecture>arm</PackageArchitecture>
+    <PackageIdentityName>2441056c-a641-47b5-b5ac-d1dc9cba8639</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\obj\ARM\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Bin\ARM\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Bin\ARM\Debug\DogeWalletC.dll">
+      <PackagePath>DogeWalletC.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.dll">
+      <PackagePath>System.Net.Http.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\NokiaImagingSDK.1.2.151\build\wp8\..\..\lib\wp8\ARM\Nokia.Graphics.Imaging.dll">
+      <PackagePath>Nokia.Graphics.Imaging.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\NokiaImagingSDK.1.2.151\build\wp8\..\..\lib\wp8\ARM\Nokia.InteropServices.WindowsRuntime.dll">
+      <PackagePath>Nokia.InteropServices.WindowsRuntime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\NokiaImagingSDK.1.2.151\build\wp8\\..\..\lib\wp8\ARM\Nokia.Graphics.Imaging.winmd">
+      <PackagePath>Nokia.Graphics.Imaging.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\NokiaImagingSDK.1.2.151\build\wp8\\..\..\lib\wp8\ARM\Nokia.InteropServices.WindowsRuntime.winmd">
+      <PackagePath>Nokia.InteropServices.WindowsRuntime.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.xml">
+      <PackagePath>Newtonsoft.Json.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.xml">
+      <PackagePath>System.Net.Http.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.Extensions.xml">
+      <PackagePath>System.Net.Http.Extensions.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.Primitives.xml">
+      <PackagePath>System.Net.Http.Primitives.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\NokiaImagingSDK.1.2.151\build\wp8\..\..\lib\wp8\ARM\Nokia.Graphics.Imaging.xml">
+      <PackagePath>Nokia.Graphics.Imaging.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\packages\NokiaImagingSDK.1.2.151\build\wp8\..\..\lib\wp8\ARM\Nokia.InteropServices.WindowsRuntime.xml">
+      <PackagePath>Nokia.InteropServices.WindowsRuntime.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\AppBarIcons\back.png">
+      <PackagePath>AppBarIcons\back.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\AppBarIcons\download.png">
+      <PackagePath>AppBarIcons\download.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\AppBarIcons\feature.camera.png">
+      <PackagePath>AppBarIcons\feature.camera.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\AppBarIcons\refresh.png">
+      <PackagePath>AppBarIcons\refresh.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\AppBarIcons\upload.png">
+      <PackagePath>AppBarIcons\upload.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\AlignmentGrid.png">
+      <PackagePath>Assets\AlignmentGrid.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\ApplicationIcon.png">
+      <PackagePath>Assets\ApplicationIcon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\BadgeLogo.png">
+      <PackagePath>Assets\BadgeLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\SquareTile150x150.png">
+      <PackagePath>Assets\SquareTile150x150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\SquareTile71x71.png">
+      <PackagePath>Assets\SquareTile71x71.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\Tiles\FlipCycleTileLarge.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\Tiles\FlipCycleTileMedium.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileMedium.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\Tiles\FlipCycleTileSmall.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\Tiles\IconicTileMediumLarge.png">
+      <PackagePath>Assets\Tiles\IconicTileMediumLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Assets\Tiles\IconicTileSmall.png">
+      <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\Bin\ARM\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
