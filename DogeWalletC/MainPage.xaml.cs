@@ -12,6 +12,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.IO.IsolatedStorage;
 
+
 namespace DogeWalletC
 {
     public partial class MainPage : PhoneApplicationPage
