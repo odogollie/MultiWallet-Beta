@@ -71,22 +71,43 @@
                        Grid.Column="1"
                        Grid.Row="0"
                        VerticalAlignment='Bottom'
-                       
+                       Text="Unconfirmed"
+                       Margin="0,0,0,0"
+                       HorizontalAlignment="Right"
+                       FontSize="30"
                        />
             <TextBlock x:Name="BitcoinBalance"
                 HorizontalAlignment="right"
                        Margin="0,0,0,0"
                        TextWrapping="Wrap"
                        Text="Set API Key"
-                       VerticalAlignment="center"
+                       VerticalAlignment="top"
                        FontSize="35" Grid.Column="1" Grid.Row="1"/>
+            <TextBlock Name="BitUnconfirmedBalance"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       VerticalAlignment='Bottom'
+                       Text="Unconfirmed"
+                       Margin="0,0,0,0"
+                       HorizontalAlignment="Right"
+                       FontSize="30"
+                       />
             <TextBlock x:Name="LitecoinBalance"
                 HorizontalAlignment="right"
                        Margin="0,0,0,0"
                        TextWrapping="Wrap"
                        Text="Set API Key"
-                       VerticalAlignment="center"
+                       VerticalAlignment="Top"
                        FontSize="35" Grid.Column="1" Grid.Row="2"/>
+            <TextBlock Name="LiteUnconfirmedBalance"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       VerticalAlignment='Bottom'
+                       Text="Unconfirmed"
+                       Margin="0,0,0,0"
+                       HorizontalAlignment="Right"
+                       FontSize="30"
+                       />
             <!--<Button Content=" Send " HorizontalAlignment="Left" Margin="0,364,0,0" VerticalAlignment="Top" Width="150"/>
             <Button Content="Receive" HorizontalAlignment="Left" Margin="156,364,0,0" VerticalAlignment="Top" Width="150"/>
             <Button Content="Refresh" HorizontalAlignment="Left" Margin="306,364,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click_Refresh"/>
