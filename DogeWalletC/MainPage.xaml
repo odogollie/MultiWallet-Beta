@@ -65,8 +65,14 @@
                        Margin="0,0,0,0"
                        TextWrapping="Wrap"
                        Text="Set API Key"
-                       VerticalAlignment="center"
+                       VerticalAlignment="top"
                        FontSize="35" Grid.Column="1"/>
+            <TextBlock Name="DogeUnconfirmedBalance"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       VerticalAlignment='Bottom'
+                       
+                       />
             <TextBlock x:Name="BitcoinBalance"
                 HorizontalAlignment="right"
                        Margin="0,0,0,0"

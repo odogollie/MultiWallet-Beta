@@ -140,11 +140,14 @@ namespace DogeWalletC
             BlockDataResult LiteapiData = JsonConvert.DeserializeObject<BlockDataResult>(literesult);
             
 
+            // SET AVAILABLE and UNCONFIRMED SEPERATLY
+
             if (net == "doge")
             {
                 double doubleBal = Double.Parse(DogeapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
-                DogecoinBalance.Text = bal.Substring(0, bal.Length - 7) + " Ð";
+                //DogecoinBalance.Text = bal.Substring(0, bal.Length - 7) + " Ð";
+                DogecoinBalance.Text = bal;
             } 
             else if (net == "bit")
             {

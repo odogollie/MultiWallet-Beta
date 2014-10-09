@@ -1,1 +1,1 @@
-C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\DogeWalletC.csproj;neutral
+D:\Program Files\Onedrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\DogeWalletC.csproj;neutral
