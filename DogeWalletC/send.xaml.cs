@@ -29,12 +29,12 @@ namespace DogeWalletC
 
         private void AddressBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            AddressBox.Text = string.Empty;
+           //AddressBox.Text = string.Empty;
         }
 
         private void AmountBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            AmountBox.Text = string.Empty;
+            //AmountBox.Text = string.Empty;
         }
 
         private async void SendButton_Click(object sender, RoutedEventArgs e)
@@ -48,13 +48,13 @@ namespace DogeWalletC
 
             var apiKey = Read_API(PickedCurrency);
 
-            //https://block.io/api/v1/withdraw/?api_key=62e5-8401-cdd9-f868&amount=10&payment_address=nXuk6KcvtjKH8e6pR5hTj1p6sEebrKiEme&pin=63645639
+            //https://block.io/api/v2/withdraw/?api_key=62e5-8401-cdd9-f868&amounts=10&to_addresses=nXuk6KcvtjKH8e6pR5hTj1p6sEebrKiEme&pin=63645639
 
 
-            string url = "https://block.io/api/v1/withdraw/" +
+            string url = "https://block.io/api/v2/withdraw/" +
                 "?api_key={0}" + 
-                "&amount={1}" + 
-                "&payment_address={2}" + 
+                "&amounts={1}" + 
+                "&to_addresses={2}" + 
                 "&pin={3}";
 
             string baseUrl = string.Format(url,

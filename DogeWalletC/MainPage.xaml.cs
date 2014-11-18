@@ -39,7 +39,7 @@ namespace DogeWalletC
             
             else
             {*/
-            if (Read_API("btc") == "BitcoinAPIKey" || Read_API("doge") == "DogeAPIKey")
+            if (Read_API("btc") == "NoAPI" || Read_API("doge") == "NoAPI")
                 {
                    // Set_API();
                 }
@@ -78,6 +78,8 @@ namespace DogeWalletC
 
         private async void Refresh()
         {
+
+
             HttpClient client = new HttpClient();
 
             //https://block.io/api/v2/get_balance/?api_key=
@@ -229,7 +231,19 @@ namespace DogeWalletC
         // Click event for Refresh
         private void RefreshClick(object sender, EventArgs e)
         {
-            Refresh();
+            if (Read_API("doge") == "NoAPI" || Read_API("btc") == "NoAPI" || Read_API("ltc") == "NoAPI")
+            {
+                DisplayMessage();
+            }else{
+                Refresh();
+            }
+            
+            
+        }
+
+        private void DisplayMessage()
+        {
+            MessageBoxResult messageBox = MessageBox.Show("Error!", "Please set all 3 API Keys in Settings", MessageBoxButton.OK);
         }
         // Click event for Send
         private void SendClick(object sender, EventArgs e)

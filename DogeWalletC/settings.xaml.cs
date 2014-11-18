@@ -14,19 +14,36 @@ namespace DogeWalletC
 {
     public partial class settings : PhoneApplicationPage
     {
+        IsolatedStorageSettings APIKeySetting = IsolatedStorageSettings.ApplicationSettings;
+        private string BitcoinAPIKey = "BitcoinAPIKey";
+        private string DogecoinAPIKey = "DogecoinAPIKey";
+        private string LitecoinAPIKey = "LitecoinAPIKey";
+
         public settings()
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
+            /* if (APIKeySetting.Contains(BitcoinAPIKey) && APIKeySetting.Contains(DogecoinAPIKey) && APIKeySetting.Contains(LitecoinAPIKey))
+            {
+                NavToMain();
+            } */
+            
+
+        }
+
+        private void NavToMain()
+        {
+            string navTo = "/MainPage.xaml";
+            NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            IsolatedStorageSettings APIKeySetting = IsolatedStorageSettings.ApplicationSettings;
+            //IsolatedStorageSettings APIKeySetting = IsolatedStorageSettings.ApplicationSettings;
 
-            var BitcoinAPIKey = "BitcoinAPIKey";
-            var DogecoinAPIKey = "DogecoinAPIKey";
-            var LitecoinAPIKey = "LitecoinAPIKey";
+            //var BitcoinAPIKey = "BitcoinAPIKey";
+            //var DogecoinAPIKey = "DogecoinAPIKey";
+            //var LitecoinAPIKey = "LitecoinAPIKey";
 
             // Bitcoin Save API
             if (!APIKeySetting.Contains(BitcoinAPIKey))
