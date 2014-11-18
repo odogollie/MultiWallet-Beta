@@ -42,9 +42,9 @@ namespace DogeWalletC
 
             var ApiKey = Read_API(PickedCurrency);
 
-            //https://block.io/api/v1/get_new_address/?api_key=62e5-8401-cdd9-f868
+            //https://block.io/api/v2/get_new_address/?api_key=
 
-            string url = "https://block.io/api/v1/get_new_address/" +
+            string url = "https://block.io/api/v2/get_new_address/" +
                 "?api_key={0}";
 
             string baseUrl = string.Format(url,
@@ -61,7 +61,7 @@ namespace DogeWalletC
                 //https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=%22dogecoin:DE74RH9n92bPH5gGTJSATAiwwyngCSqPVF%22
 
                 // CAN USE DOGECHAIN QR API
-                // https://dogechain.info/api/v1/address/qrcode/DTXbfrYymxRakKPC56txP4w4bgD4CpcJdJ
+                // https://dogechain.info/api/v2/address/qrcode/DTXbfrYymxRakKPC56txP4w4bgD4CpcJdJ
 
                 string dogechainQR = "https://dogechain.info/api/v1/address/qrcode/" +
                     "{0}";
