@@ -39,7 +39,7 @@ namespace DogeWalletC
             
             else
             {*/
-                if (Read_API("btc") == "NoAPI" || Read_API("doge") == "NoAPI")
+            if (Read_API("btc") == "BitcoinAPIKey" || Read_API("doge") == "DogeAPIKey")
                 {
                    // Set_API();
                 }
@@ -80,7 +80,7 @@ namespace DogeWalletC
         {
             HttpClient client = new HttpClient();
 
-            //https://block.io/api/v1/get_balance/?api_key=62e5-8401-cdd9-f868
+            //https://block.io/api/v2/get_balance/?api_key=
 
             //var apiKey = "488a-4cae-1407-4373";
             // set apikeys to local vars
@@ -89,11 +89,11 @@ namespace DogeWalletC
             var liteapiKey = Read_API("ltc");
 
             // setting urls
-            string dogeurl = "https://block.io/api/v1/get_balance/" +
+            string dogeurl = "https://block.io/api/v2/get_balance/" +
                 "?api_key=" + dogeapiKey;
-            string biturl = "https://block.io/api/v1/get_balance/" +
+            string biturl = "https://block.io/api/v2/get_balance/" +
                 "?api_key=" + bitapiKey;
-            string liteurl = "https://block.io/api/v1/get_balance/" +
+            string liteurl = "https://block.io/api/v2/get_balance/" +
                 "?api_key=" + liteapiKey;
 
             // try catch for each url
@@ -147,17 +147,17 @@ namespace DogeWalletC
                 double doubleBal = Double.Parse(DogeapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
                 //DogecoinBalance.Text = bal.Substring(0, bal.Length - 7) + " Ð";
-                DogecoinBalance.Text = bal;
+                DogecoinBalance.Text = bal + " Ð";
             } 
             else if (net == "bit")
             {
-                double doubleBal = Double.Parse(BitapiData.data.available_balance) + Double.Parse(BitapiData.data.unconfirmed_received_balance) - Double.Parse(BitapiData.data.unconfirmed_sent_balance);
+                double doubleBal = Double.Parse(BitapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
                 BitcoinBalance.Text = bal + " ฿";
             }
             else if (net == "lite")
             {
-                double doubleBal = Double.Parse(LiteapiData.data.available_balance) + Double.Parse(LiteapiData.data.unconfirmed_received_balance) - Double.Parse(LiteapiData.data.unconfirmed_sent_balance);
+                double doubleBal = Double.Parse(LiteapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
                 LitecoinBalance.Text = bal + " Ł";
             }
@@ -287,8 +287,7 @@ namespace DogeWalletC
     {
         public string network { get; set; }
         public string available_balance { get; set; }
-        public string unconfirmed_sent_balance { get; set; }
-        public string unconfirmed_received_balance { get; set; }
+        public string pending_received_balance { get; set; }
         public string error_message { get; set; }
     }
 

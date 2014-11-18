@@ -86,9 +86,9 @@ namespace DogeWalletC
         {
             HttpClient client = new HttpClient();
 
-            //https://block.io/api/v1/get_balance/?api_key=
+            //https://block.io/api/v2/get_balance/?api_key=
 
-            var url = "https://block.io/api/v1/get_balance/?api_key=" +
+            var url = "https://block.io/api/v2/get_balance/?api_key=" +
                 apiKey;
             try
             {
