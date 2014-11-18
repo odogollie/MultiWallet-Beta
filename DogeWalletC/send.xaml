@@ -121,7 +121,7 @@
             <TextBlock HorizontalAlignment="center" 
                        Margin="0,20,0,0" 
                        TextWrapping="Wrap" 
-                       Text="Fees" 
+                       Text="Network Fees" 
                        VerticalAlignment="Top"
                        Grid.Row="4"/>
             <TextBlock HorizontalAlignment="center" 

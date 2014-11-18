@@ -32,7 +32,7 @@
             <TextBlock HorizontalAlignment="Left" 
                        Margin="10,10,0,0" 
                        TextWrapping="Wrap" 
-                       Text="App created by: /u/odogollie" 
+                       Text="App created by: /u/odog_" 
                        VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left"
                        Margin="10,64,0,0"
@@ -42,7 +42,7 @@
             <TextBlock HorizontalAlignment="Left"
                        Margin="10,91,0,0"
                        TextWrapping="Wrap"
-                       Text="You don't need to set all of the API keys if you don't want to. But I highly recommend it."
+                       Text="You do need to set all of the API keys even if you don't use them."
                        VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left"
                        Margin="10,37,0,0" 
@@ -52,7 +52,7 @@
             <TextBlock HorizontalAlignment="Left" 
                        Margin="10,422,0,0" 
                        TextWrapping="Wrap" 
-                       Text="I (/u/odogollie) am not responsible for any lost Dogecoin, Litecoin, or Bitcoin and their respective TestNets."
+                       Text="I (/u/odog_) am not responsible for any lost Dogecoin, Litecoin, or Bitcoin and their respective Testnets."
                        VerticalAlignment="Top"/>
             <Button Content="Rate and Review" 
                     HorizontalAlignment="Left" 
