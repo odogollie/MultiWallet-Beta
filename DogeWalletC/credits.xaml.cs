@@ -81,6 +81,7 @@ namespace DogeWalletC
         private async void Rate_Click(object sender, RoutedEventArgs e)
         {
             await Launcher.LaunchUriAsync(new Uri("zune:reviewapp?appid=appc8773a84-d2c7-49e9-92ce-4da848e70da8"));
+            //?appid=appc8773a84-d2c7-49e9-92ce-4da848e70da8
         }
     }
 
