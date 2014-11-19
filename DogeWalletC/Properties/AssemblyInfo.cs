@@ -9,7 +9,7 @@ using System.Resources;
 [assembly: AssemblyTitle("MultiWallet")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Oliver & Co.")]
 [assembly: AssemblyProduct("DogeWalletC")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]

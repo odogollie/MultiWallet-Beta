@@ -1,1 +1,1 @@
-C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\DogeWalletC.csproj;arm
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\DogeWalletC.csproj;arm

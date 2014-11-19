@@ -10,9 +10,9 @@ using Microsoft.Phone.Shell;
 
 namespace DogeWalletC
 {
-    public partial class credits : PhoneApplicationPage
+    public partial class credit : PhoneApplicationPage
     {
-        public credits()
+        public credit()
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();

@@ -13,10 +13,10 @@ using Newtonsoft.Json;
 
 namespace DogeWalletC
 {
-    public partial class Page1 : PhoneApplicationPage
+    public partial class send : PhoneApplicationPage
     {
         string PickedCurrency = "DogecoinAPIKey";
-        public Page1()
+        public send()
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
@@ -148,11 +148,11 @@ namespace DogeWalletC
             appBarButtonScan.Click += ScanClick;
             ApplicationBar.Buttons.Add(appBarButtonScan);*/
 
-            ApplicationBarIconButton appBarButtonHome = new ApplicationBarIconButton(
+            /*ApplicationBarIconButton appBarButtonHome = new ApplicationBarIconButton(
                 new Uri("/AppBarIcons/back.png", UriKind.Relative));
             appBarButtonHome.Text = "Back";
             appBarButtonHome.Click += HomeClick;
-            ApplicationBar.Buttons.Add(appBarButtonHome);
+            ApplicationBar.Buttons.Add(appBarButtonHome);*/
 
             // Create a new menu item with the localized string from AppResources.
             ApplicationBarMenuItem appBarMenuItemSettings = new ApplicationBarMenuItem("Settings");
@@ -174,11 +174,11 @@ namespace DogeWalletC
             throw new NotImplementedException();
         }
 
-        private void HomeClick(object sender, EventArgs e)
+        /*private void HomeClick(object sender, EventArgs e)
         {
             string navTo = "/MainPage.xaml";
             NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
-        }
+        }*/
 
         // Click event for Settings option in app Menu
         private void MenuSettings(object sender, EventArgs e)
