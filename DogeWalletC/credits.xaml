@@ -57,11 +57,13 @@
             <Button Content="Rate and Review" 
                     HorizontalAlignment="Left" 
                     Margin="10,207,0,0" 
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top"
+                    Click="Rate_Click"/>
             <Button Content="Feedback" 
                     HorizontalAlignment="Left" 
                     Margin="10,279,0,0" 
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top"
+                    Click="FeedBack_Click"/>
 
 
         </Grid>

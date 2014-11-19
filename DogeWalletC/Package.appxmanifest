@@ -1,59 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest"
-         xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
-         xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest"
-         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-
-  <Identity Name="e9093cff-036d-4533-854e-92bd138a4a5f"
-            Publisher="CN=Oliver"
-            Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="2441056c-a641-47b5-b5ac-d1dc9cba8639"
-                    PhonePublisherId="0c7a2aaf-7eae-457d-898c-ef835fff6b98"/>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="26459Monstersoft.MultiWalletBeta" Publisher="CN=A3AB3CC4-6A6D-49A7-89D2-27240B3F5240" Version="1.0.1.0" />
+  <mp:PhoneIdentity PhoneProductId="2441056c-a641-47b5-b5ac-d1dc9cba8639" PhonePublisherId="0c7a2aaf-7eae-457d-898c-ef835fff6b98" />
   <Properties>
-    <DisplayName>DogeWalletC</DisplayName>
-    <PublisherDisplayName>Oliver</PublisherDisplayName>
+    <DisplayName>MultiWalletBeta</DisplayName>
+    <PublisherDisplayName>Oliver &amp; Co.</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-                 Executable="AGHost.exe"
-                 EntryPoint="MainPage.xaml">
-      <m3:VisualElements
-          DisplayName="DogeWalletC"
-          Square150x150Logo="Assets\SquareTile150x150.png"
-          Square44x44Logo="Assets\Logo.png"
-          Description="DogeWalletC"
-          ForegroundText="light"
-          BackgroundColor="#464646">
-        <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png"/>
+    <Application Id="App" Executable="AGHost.exe" EntryPoint="MainPage.xaml">
+      <m3:VisualElements DisplayName="DogeWalletC" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="MultiWallet Beta" ForegroundText="light" BackgroundColor="#464646">
+        <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png">
+        </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>
-
       <Extensions>
         <Extension Category="windows.backgroundTasks" EntryPoint="AgHost.BackgroundTask">
           <BackgroundTasks>
-          <Task Type="systemEvent" />
+            <Task Type="systemEvent" />
           </BackgroundTasks>
         </Extension>
       </Extensions>
-
     </Application>
   </Applications>
-  <Capabilities>
-  </Capabilities>
-
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
@@ -62,5 +38,4 @@
       </InProcessServer>
     </Extension>
   </Extensions>
-
 </Package>

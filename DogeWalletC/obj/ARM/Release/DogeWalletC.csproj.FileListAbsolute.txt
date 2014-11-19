@@ -153,7 +153,6 @@ D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Rel
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\ru\System.Windows.Interactivity.resources.dll
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\zh-Hans\System.Windows.Interactivity.resources.dll
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\zh-Hant\System.Windows.Interactivity.resources.dll
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\DogeWalletC.csprojResolveAssemblyReference.cache
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\App.g.cs
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\credits.g.cs
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\MainPage.g.cs
@@ -182,6 +181,7 @@ D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Rel
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\ProjectArchitectures.txt
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\MDILProjectFiles.xml
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\XapCacheFile.xml
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\DogeWalletC.csprojResolveAssemblyReference.cache
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\layout.resfiles
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\layout.resfiles.intermediate
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\Resources.resfiles

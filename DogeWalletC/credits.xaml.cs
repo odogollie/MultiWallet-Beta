@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Windows.System;
 
 namespace DogeWalletC
 {
@@ -71,6 +72,15 @@ namespace DogeWalletC
         {
             string navTo = "/send.xaml";
             NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
+        }
+
+        private async void FeedBack_Click(object sender, RoutedEventArgs e)
+        {
+            await Launcher.LaunchUriAsync(new Uri("mailto:oliver.shanklin@outlook.com"));
+        }
+        private async void Rate_Click(object sender, RoutedEventArgs e)
+        {
+            await Launcher.LaunchUriAsync(new Uri("zune:reviewapp?appid=appc8773a84-d2c7-49e9-92ce-4da848e70da8"));
         }
     }
 
