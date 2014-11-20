@@ -207,6 +207,17 @@ namespace DogeWalletC
             ApplicationBarMenuItem appBarMenuItemCredits = new ApplicationBarMenuItem("Credits");
             appBarMenuItemCredits.Click += MenuCredits;
             ApplicationBar.MenuItems.Add(appBarMenuItemCredits);
+
+            //Shapeshift.io page
+            ApplicationBarMenuItem appBarMenuItemShape = new ApplicationBarMenuItem("Shift Coins");
+            appBarMenuItemShape.Click += MenuShape;
+            ApplicationBar.MenuItems.Add(appBarMenuItemShape);
+        }
+
+        private void MenuShape(object sender, EventArgs e)
+        {
+            string navTo = "/shift.xaml";
+            NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
         }
 
         // Click event for Settings option in app Menu
