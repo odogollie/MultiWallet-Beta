@@ -20,6 +20,9 @@ namespace DogeWalletC
             this.ReceiveCurrency.ItemsSource = currency;
         }
 
+
+        
+
         string[] currency = {"Dogecoin", "Bitcoin", "Litecoin"};
         string sendCurrency = "DogecoinAPIKey";
         string receiveCurrency = "BitcoinAPIKey";
