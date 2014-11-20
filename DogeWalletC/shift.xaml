@@ -23,7 +23,7 @@
         <DataTemplate x:Name="modulePickerFullItemTemplate">
             <StackPanel>
                 <TextBlock Text="{Binding currency}"
-                           FontSize="45"/>
+                           FontSize="72"/>
             </StackPanel>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
@@ -107,7 +107,7 @@
                 Grid.Row="2"
                 Margin="12,12,12,0"
                 VerticalAlignment="Top"
-                Text="Amount"
+                Text="Amount to Send:"
                 />
             <TextBox
                 Name="PinBox"

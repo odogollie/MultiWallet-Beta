@@ -148,20 +148,26 @@ namespace DogeWalletC
             {
                 double doubleBal = Double.Parse(DogeapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
+                double unconBal = Double.Parse(DogeapiData.data.pending_received_balance);
                 //DogecoinBalance.Text = bal.Substring(0, bal.Length - 7) + " Ð";
                 DogecoinBalance.Text = bal + " Ð";
+                DogeUnconfirmedBalance.Text = unconBal + " Ð";
             } 
             else if (net == "bit")
             {
                 double doubleBal = Double.Parse(BitapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
+                double unconBal = Double.Parse(BitapiData.data.pending_received_balance);
                 BitcoinBalance.Text = bal + " ฿";
+                BitUnconfirmedBalance.Text = unconBal + " ฿";
             }
             else if (net == "lite")
             {
                 double doubleBal = Double.Parse(LiteapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
+                double unconBal = Double.Parse(LiteapiData.data.pending_received_balance);
                 LitecoinBalance.Text = bal + " Ł";
+                LiteUnconfirmedBalance.Text = unconBal + " Ł";
             }
         }
 

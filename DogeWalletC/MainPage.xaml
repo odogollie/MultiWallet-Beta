@@ -54,14 +54,14 @@
 				TextWrapping="Wrap" 
 				Text="Dogecoin"
 				FontSize="35"
-				VerticalAlignment="center"
+				VerticalAlignment="Top"
 				Margin="0,0,0,0"/>
             <TextBlock
 				HorizontalAlignment="Left" 
 				TextWrapping="Wrap" 
 				Text="Bitcoin"
 				FontSize="35"
-				VerticalAlignment="center"
+				VerticalAlignment="Top"
 				Margin="0,0,0,0"
 				Grid.Row="1"/>
             <TextBlock
@@ -69,16 +69,38 @@
 				TextWrapping="Wrap" 
 				Text="Litecoin"
 				FontSize="35"
-				VerticalAlignment="center" Margin="0,0,0,0"
+				VerticalAlignment="Top" Margin="0,0,0,0"
 				Grid.Row="2"/>
+            
+            <TextBlock
+                HorizontalAlignment="Left"
+                Grid.Row="0"
+                FontSize="30"
+                Text="Unconfirmed:"
+                VerticalAlignment="Bottom"
+                />
+            <TextBlock
+                HorizontalAlignment="Left"
+                Grid.Row="1"
+                FontSize="30"
+                Text="Unconfirmed:"
+                VerticalAlignment="Bottom"
+                />
+            <TextBlock
+                HorizontalAlignment="Left"
+                Grid.Row="2"
+                FontSize="30"
+                Text="Unconfirmed:"
+                VerticalAlignment="Bottom"
+                />
             <TextBlock x:Name="DogecoinBalance"
 				HorizontalAlignment="right"
 				Margin="0,0,0,0"
 				TextWrapping="Wrap"
 				Text="Set API Key"
-				VerticalAlignment="Center"
+				VerticalAlignment="Top"
 				FontSize="35" Grid.Column="1"/>
-            <!--<TextBlock x:Name="DogeUnconfirmedBalance"
+            <TextBlock x:Name="DogeUnconfirmedBalance"
 				Grid.Column="1"
 				Grid.Row="0"
 				VerticalAlignment='Bottom'
@@ -86,15 +108,15 @@
 				Margin="0,0,0,0"
 				HorizontalAlignment="Right"
 				FontSize="30"
-                       />-->
+                       />
             <TextBlock x:Name="BitcoinBalance"
 				HorizontalAlignment="right"
 				Margin="0,0,0,0"
 				TextWrapping="Wrap"
 				Text="Set API Key"
-				VerticalAlignment="Center"
+				VerticalAlignment="Top"
 				FontSize="35" Grid.Column="1" Grid.Row="1"/>
-            <!--<TextBlock x:Name="BitUnconfirmedBalance"
+            <TextBlock x:Name="BitUnconfirmedBalance"
 				Grid.Column="1"
 				Grid.Row="1"
 				VerticalAlignment='Bottom'
@@ -102,15 +124,15 @@
 				Margin="0,0,0,0"
 				HorizontalAlignment="Right"
 				FontSize="30"
-                       />-->
+                       />
             <TextBlock x:Name="LitecoinBalance"
 				HorizontalAlignment="right"
 				Margin="0,0,0,0"
 				TextWrapping="Wrap"
 				Text="Set API Key"
-				VerticalAlignment="Center"
+				VerticalAlignment="Top"
 				FontSize="35" Grid.Column="1" Grid.Row="2"/>
-            <!--<TextBlock x:Name="LiteUnconfirmedBalance"
+            <TextBlock x:Name="LiteUnconfirmedBalance"
 				Grid.Column="1"
 				Grid.Row="2"
 				VerticalAlignment='Bottom'
@@ -118,7 +140,7 @@
 				Margin="0,0,0,0"
 				HorizontalAlignment="Right"
 				FontSize="30"
-                       />-->
+                       />
             <!--<Button Content=" Send " HorizontalAlignment="Left" Margin="0,364,0,0" VerticalAlignment="Top" Width="150"/>
             <Button Content="Receive" HorizontalAlignment="Left" Margin="156,364,0,0" VerticalAlignment="Top" Width="150"/>
             <Button Content="Refresh" HorizontalAlignment="Left" Margin="306,364,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click_Refresh"/>
