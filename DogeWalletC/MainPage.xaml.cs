@@ -281,7 +281,7 @@ namespace DogeWalletC
 
         }
 
-        private void Dogecoin_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        /*private void Dogecoin_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
 
         }
@@ -292,7 +292,7 @@ namespace DogeWalletC
         private void Litecoin_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
 
-        }
+        }*/
 
     }
 

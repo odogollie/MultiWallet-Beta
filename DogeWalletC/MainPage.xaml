@@ -15,9 +15,7 @@
     shell:SystemTray.IsVisible="True">
 
     <i:Interaction.Triggers>
-        <i:EventTrigger EventName="MouseLeftButtonDown">
-            <ec:NavigateToPageAction TargetPage="/receive.xaml"/>
-        </i:EventTrigger>
+        
     </i:Interaction.Triggers>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -57,7 +55,7 @@
 				Text="Dogecoin"
 				FontSize="35"
 				VerticalAlignment="center"
-				Tap="Dogecoin_Tap" Margin="0,0,0,0"/>
+				Margin="0,0,0,0"/>
             <TextBlock
 				HorizontalAlignment="Left" 
 				TextWrapping="Wrap" 
@@ -65,14 +63,14 @@
 				FontSize="35"
 				VerticalAlignment="center"
 				Margin="0,0,0,0"
-				Tap="Bitcoin_Tap" Grid.Row="1"/>
+				Grid.Row="1"/>
             <TextBlock
 				HorizontalAlignment="Left" 
 				TextWrapping="Wrap" 
 				Text="Litecoin"
 				FontSize="35"
 				VerticalAlignment="center" Margin="0,0,0,0"
-				Tap="Litecoin_Tap" Grid.Row="2"/>
+				Grid.Row="2"/>
             <TextBlock x:Name="DogecoinBalance"
 				HorizontalAlignment="right"
 				Margin="0,0,0,0"

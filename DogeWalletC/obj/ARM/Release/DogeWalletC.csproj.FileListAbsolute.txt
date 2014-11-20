@@ -182,11 +182,3 @@ D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Rel
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\MDILProjectFiles.xml
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\XapCacheFile.xml
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\DogeWalletC.csprojResolveAssemblyReference.cache
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\layout.resfiles
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\layout.resfiles.intermediate
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\Resources.resfiles
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\Resources.resfiles.intermediate
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\pri.resfiles
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\pri.resfiles.intermediate
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\priconfig.xml
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\System.Net.Http\priconfig.xml.intermediate
