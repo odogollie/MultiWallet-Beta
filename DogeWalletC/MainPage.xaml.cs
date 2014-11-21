@@ -150,7 +150,7 @@ namespace DogeWalletC
                 string bal = String.Concat(doubleBal);
                 double unconBal = Double.Parse(DogeapiData.data.pending_received_balance);
                 //DogecoinBalance.Text = bal.Substring(0, bal.Length - 7) + " Ð";
-                DogecoinBalance.Text = bal + " Ð";
+                DogecoinBalance.Text = bal.Substring(0, bal.Length - 5) + " Ð";
                 DogeUnconfirmedBalance.Text = unconBal + " Ð";
             } 
             else if (net == "bit")

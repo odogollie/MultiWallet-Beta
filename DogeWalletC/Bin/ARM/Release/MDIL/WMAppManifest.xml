@@ -4,16 +4,11 @@
   <Languages xmlns="">
     <Language code="en" />
   </Languages>
-  <App xmlns="" ProductID="{2441056c-a641-47b5-b5ac-d1dc9cba8639}" Title="Multiwallet" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Oliver Shanklin" Description="Uses Block.io API to send and receive Crypto. BTC, DOGE, LTC. A Block.io API key is needed for this app to work. Please create an account with them if you haven't already." SDOptOut="false" BackUpOptOut="false" Publisher="Monstersoft" PublisherID="{0c7a2aaf-7eae-457d-898c-ef835fff6b98}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <App xmlns="" ProductID="{2441056c-a641-47b5-b5ac-d1dc9cba8639}" Title="MultiWalletBeta" RuntimeType="Silverlight" Version="1.0.3.1" Genre="apps.normal" Author="Oliver &amp; Co." Description="Uses Block.io API to send and receive Crypto. BTC, DOGE, LTC. A Block.io API key is needed for this app to work. Please create an account with them if you haven't already." SDOptOut="false" BackUpOptOut="false" Publisher="Oliver &amp; Co." PublisherID="{58bffa98-f13e-43f3-a9f8-7935b89ebf4d}">
+    <IconPath IsRelative="true" IsResource="false">StoreLogo.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
-      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
-      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
-      <Capability Name="ID_CAP_SENSORS" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-      <Capability Name="ID_CAP_PUSH_NOTIFICATION" />
-      <Capability Name="ID_CAP_ISV_CAMERA" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" ActivationPolicy="Resume" />
@@ -21,14 +16,14 @@
     <Tokens>
       <PrimaryToken TokenID="DogeWalletCToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">SquareTile71x71.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>Multiwallet</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">SquareTile150x150.png</BackgroundImageURI>
+          <Title>MultiWallet</Title>
           <BackContent></BackContent>
-          <BackBackgroundImageURI></BackBackgroundImageURI>
+          <BackBackgroundImageURI IsRelative="true" IsResource="false"></BackBackgroundImageURI>
           <BackTitle></BackTitle>
-          <DeviceLockImageURI></DeviceLockImageURI>
+          <DeviceLockImageURI IsRelative="true" IsResource="false"></DeviceLockImageURI>
           <HasLarge>False</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
@@ -38,9 +33,6 @@
       <ScreenResolution Name="ID_RESOLUTION_WXGA" />
       <ScreenResolution Name="ID_RESOLUTION_HD720P" />
     </ScreenResolutions>
-    <Requirements>
-      <Requirement Name="ID_REQ_REARCAMERA" />
-    </Requirements>
   </App>
 </Deployment>
-<!-- WPSDK Version 8.1.14141 -->
+<!-- WPSDK Version 8.1.14194 -->
