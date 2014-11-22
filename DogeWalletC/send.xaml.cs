@@ -46,6 +46,8 @@ namespace DogeWalletC
             var amount = AmountBox.Text;
             var pin = PinBox.Text;
 
+            amount = string.Concat("0" + amount);
+
             var apiKey = Read_API(PickedCurrency);
 
             //https://block.io/api/v2/withdraw/?api_key=62e5-8401-cdd9-f868&amounts=10&to_addresses=nXuk6KcvtjKH8e6pR5hTj1p6sEebrKiEme&pin=63645639
