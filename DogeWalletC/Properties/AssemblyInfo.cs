@@ -7,7 +7,7 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MultiWallet")]
-[assembly: AssemblyDescription("Beta Testing MultiWallet")]
+[assembly: AssemblyDescription("MultiWallet")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Oliver & Co.")]
 [assembly: AssemblyProduct("DogeWalletC")]

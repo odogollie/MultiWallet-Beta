@@ -157,6 +157,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DogeWalletC_2014_11_24_22_23_36.sap" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -176,6 +177,7 @@
     <Content Include="Assets\SquareTile150x150.png" />
     <Content Include="Assets\SquareTile71x71.png" />
     <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\StoreLogo300x300.png" />
     <Content Include="Assets\WideLogo.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
