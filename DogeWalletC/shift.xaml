@@ -63,12 +63,12 @@
                                 FullModeHeader="Pick Currency to Send"
                                 FullModeItemTemplate="{Binding PickerFullItemTemplate}" 
                     ItemTemplate="{Binding modulePickerItemTemplate}"
-                                Style="{StaticResource LPickFullModeTxtBlock}">
-                <!--<toolkit:ListPickerItem x:Name="Doge" Content="Dogecoin"/>
+                                />
+            <!--<toolkit:ListPickerItem x:Name="Doge" Content="Dogecoin"/>
                 <toolkit:ListPickerItem x:Name="Bit" Content="Bitcoin"/>
                 <toolkit:ListPickerItem x:Name="Lite" Content="Litecoin"/>-->
-                
-            </toolkit:ListPicker>
+
+
             <TextBlock
                 Name="WhichToSend"
                 Grid.Row="0"
@@ -125,6 +125,11 @@
                 Grid.Row="3"
                 Margin="12,12,12,0"
                 Text="Pin:"
+                VerticalAlignment="Top"
+                />
+            <TextBlock
+                Text="Still under development!"
+                Grid.Row="4"
                 VerticalAlignment="Top"
                 />
 

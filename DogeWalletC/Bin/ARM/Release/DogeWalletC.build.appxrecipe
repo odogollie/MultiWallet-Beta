@@ -283,9 +283,6 @@
     <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Assets\AlignmentGrid.png">
       <PackagePath>Assets\AlignmentGrid.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Assets\ApplicationIcon.png">
-      <PackagePath>Assets\ApplicationIcon.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Assets\BadgeLogo.png">
       <PackagePath>Assets\BadgeLogo.png</PackagePath>
     </AppxPackagedFile>
@@ -326,6 +323,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Assets\Tiles\IconicTileSmall.png">
       <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\cw.png">
+      <PackagePath>cw.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\FlipCycleTileMedium.png">
       <PackagePath>FlipCycleTileMedium.png</PackagePath>

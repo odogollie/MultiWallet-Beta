@@ -57,7 +57,6 @@ C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalle
 C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\obj\ARM\Release\System.Net.Http\pri.resfiles.intermediate
 C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\obj\ARM\Release\System.Net.Http\priconfig.xml
 C:\Users\Oliver\SkyDrive\Documents\Visual Studio Solutions\DogeWalletC\DogeWalletC\obj\ARM\Release\System.Net.Http\priconfig.xml.intermediate
-D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\Assets\ApplicationIcon.png
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\Assets\Tiles\FlipCycleTileLarge.png
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\Assets\Tiles\FlipCycleTileMedium.png
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\Assets\Tiles\FlipCycleTileSmall.png

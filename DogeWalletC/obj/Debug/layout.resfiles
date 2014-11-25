@@ -4,7 +4,6 @@ AppBarIcons\feature.camera.png
 AppBarIcons\refresh.png
 AppBarIcons\upload.png
 Assets\AlignmentGrid.png
-Assets\ApplicationIcon.png
 Assets\BadgeLogo.png
 Assets\Logo.png
 Assets\SplashScreen.png
@@ -17,6 +16,7 @@ Assets\Tiles\FlipCycleTileSmall.png
 Assets\Tiles\IconicTileMediumLarge.png
 Assets\Tiles\IconicTileSmall.png
 Assets\WideLogo.png
+cw.png
 FlipCycleTileMedium.png
 FlipCycleTileSmall.png
 SquareTile150x150.png
