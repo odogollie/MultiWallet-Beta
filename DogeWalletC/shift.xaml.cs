@@ -16,8 +16,8 @@ namespace DogeWalletC
         public shift()
         {
             InitializeComponent();
-            this.SendCurrency.ItemsSource = currency;
-            this.ReceiveCurrency.ItemsSource = currency;
+            //this.SendCurrency.ItemsSource = currency;
+            //this.ReceiveCurrency.ItemsSource = currency;
         }
 
 

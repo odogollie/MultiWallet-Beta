@@ -306,6 +306,9 @@
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Assets\StoreLogo300x300.png">
+      <PackagePath>Assets\StoreLogo300x300.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Assets\WideLogo.png">
       <PackagePath>Assets\WideLogo.png</PackagePath>
     </AppxPackagedFile>

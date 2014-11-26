@@ -1,6 +1,6 @@
-﻿<xapCache source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\DogeWalletC_Release_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="11/24/2014 10:36:11 PM">
-  <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\resources.pri" archivePath="resources.pri" lastWriteTime="11/24/2014 10:36:10 PM" />
-  <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\DogeWalletC.dll" archivePath="DogeWalletC.dll" lastWriteTime="11/24/2014 10:25:14 PM" />
+﻿<xapCache source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\DogeWalletC_Release_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="11/25/2014 2:58:21 PM">
+  <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\resources.pri" archivePath="resources.pri" lastWriteTime="11/25/2014 2:58:18 PM" />
+  <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\DogeWalletC.dll" archivePath="DogeWalletC.dll" lastWriteTime="11/25/2014 2:58:17 PM" />
   <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\AppBarIcons\back.png" archivePath="AppBarIcons\back.png" lastWriteTime="10/23/2014 4:35:15 PM" />
   <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\AppBarIcons\download.png" archivePath="AppBarIcons\download.png" lastWriteTime="10/23/2014 4:35:15 PM" />
   <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\AppBarIcons\feature.camera.png" archivePath="AppBarIcons\feature.camera.png" lastWriteTime="10/23/2014 4:35:15 PM" />
@@ -45,6 +45,6 @@
   <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="11/23/2014 5:30:25 PM" />
   <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Assets\SquareTile150x150.png" archivePath="Assets\SquareTile150x150.png" lastWriteTime="11/23/2014 5:29:22 PM" />
   <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="11/24/2014 10:36:11 PM" />
-  <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="11/24/2014 10:36:11 PM" />
-  <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="11/24/2014 10:36:10 PM" />
+  <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\ARM\Release\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="11/25/2014 2:58:20 PM" />
+  <file source="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\Bin\ARM\Release\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="11/25/2014 2:58:18 PM" />
 </xapCache>
