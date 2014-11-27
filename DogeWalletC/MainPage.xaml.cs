@@ -39,12 +39,12 @@ namespace DogeWalletC
             
             else
             {*/
-            if (Read_API("btc") == "NoAPI" || Read_API("doge") == "NoAPI")
-                {
-                   // Set_API();
-                }
-                else
-                    Refresh();
+            if (Read_API("btc") == "NoAPI" || Read_API("doge") == "NoAPI" || Read_API("lite") == "NoAPI")
+            {
+                //DisplayMessage();
+            }
+            else
+                Refresh();
 
             //Refresh();
 
@@ -137,35 +137,38 @@ namespace DogeWalletC
 
         private void setBalance(string net)
         {
-            BlockDataResult DogeapiData = JsonConvert.DeserializeObject<BlockDataResult>(dogeresult);
-            BlockDataResult BitapiData = JsonConvert.DeserializeObject<BlockDataResult>(bitresult);
-            BlockDataResult LiteapiData = JsonConvert.DeserializeObject<BlockDataResult>(literesult);
-            
-
-            // SET AVAILABLE and UNCONFIRMED SEPERATLY
+            // SET AVAILABLE and UNCONFIRMED
 
             if (net == "doge")
             {
+                BlockDataResult DogeapiData = JsonConvert.DeserializeObject<BlockDataResult>(dogeresult);
+
                 double doubleBal = Double.Parse(DogeapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
                 double unconBal = Double.Parse(DogeapiData.data.pending_received_balance);
-                //DogecoinBalance.Text = bal.Substring(0, bal.Length - 7) + " Ð";
+
                 DogecoinBalance.Text = bal.Substring(0, bal.Length - 5) + " Ð";
                 DogeUnconfirmedBalance.Text = unconBal + " Ð";
             } 
             else if (net == "bit")
             {
+                BlockDataResult BitapiData = JsonConvert.DeserializeObject<BlockDataResult>(bitresult);
+
                 double doubleBal = Double.Parse(BitapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
                 double unconBal = Double.Parse(BitapiData.data.pending_received_balance);
+
                 BitcoinBalance.Text = bal + " ฿";
                 BitUnconfirmedBalance.Text = unconBal + " ฿";
             }
             else if (net == "lite")
             {
+                BlockDataResult LiteapiData = JsonConvert.DeserializeObject<BlockDataResult>(literesult);
+
                 double doubleBal = Double.Parse(LiteapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
                 double unconBal = Double.Parse(LiteapiData.data.pending_received_balance);
+
                 LitecoinBalance.Text = bal + " Ł";
                 LiteUnconfirmedBalance.Text = unconBal + " Ł";
             }
@@ -248,7 +251,7 @@ namespace DogeWalletC
         // Click event for Refresh
         private void RefreshClick(object sender, EventArgs e)
         {
-            if (Read_API("doge") == "NoAPI" || Read_API("btc") == "NoAPI" || Read_API("ltc") == "NoAPI")
+            if (Read_API("doge") == "NoAPI" && Read_API("btc") == "NoAPI" && Read_API("ltc") == "NoAPI")
             {
                 DisplayMessage();
             }else{

@@ -94,6 +94,16 @@
                     VerticalAlignment="Top"
                     Click="Button_Click" 
                     Grid.Row="3"/>
+            <TextBlock Text="Make sure you are using a new account with"
+                       Grid.Row="4"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center"
+                       />
+            <TextBlock Text="Block.io (MultiSig or V2)"
+                       Grid.Row="4"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center"
+                       Margin="0,25,0,0"/>
             
 
         </Grid>
