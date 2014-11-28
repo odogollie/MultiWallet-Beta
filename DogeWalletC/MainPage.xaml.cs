@@ -84,7 +84,6 @@ namespace DogeWalletC
 
             //https://block.io/api/v2/get_balance/?api_key=
 
-            //var apiKey = "488a-4cae-1407-4373";
             // set apikeys to local vars
             var dogeapiKey = Read_API("doge");
             var bitapiKey = Read_API("btc");
@@ -173,15 +172,6 @@ namespace DogeWalletC
                 LiteUnconfirmedBalance.Text = unconBal + " Ł";
             }
         }
-
-        /*private void PendingTx(string pendReceive, string pendSent, string bal)
-        {
-            balance.Text = bal;
-
-            double pend = Double.Parse(pendSent) - Double.Parse(pendReceive);
-            Pending.Text = String.Concat(pend);
-
-        }*/
 
         // Sample code for building a localized ApplicationBar
         private void BuildLocalizedApplicationBar()

@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Windows.System;
+using System.Reflection;
 
 namespace DogeWalletC
 {
@@ -17,6 +18,7 @@ namespace DogeWalletC
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
+            Version.Text = "Version: " + GetVersion();
         }
 
         private void BuildLocalizedApplicationBar()
@@ -82,6 +84,16 @@ namespace DogeWalletC
         {
             await Launcher.LaunchUriAsync(new Uri("zune:reviewapp?appid=appc8773a84-d2c7-49e9-92ce-4da848e70da8"));
             //?appid=appc8773a84-d2c7-49e9-92ce-4da848e70da8
+        }
+        public static string GetVersion()
+        {
+            var versionAttribute = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyFileVersionAttribute), true).FirstOrDefault() as AssemblyFileVersionAttribute;
+
+            if (versionAttribute != null)
+            {
+                return versionAttribute.Version;
+            }
+            return "";
         }
     }
 

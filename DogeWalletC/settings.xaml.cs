@@ -23,6 +23,7 @@ namespace DogeWalletC
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
+            
             /* if (APIKeySetting.Contains(BitcoinAPIKey) && APIKeySetting.Contains(DogecoinAPIKey) && APIKeySetting.Contains(LitecoinAPIKey))
             {
                 NavToMain();
@@ -33,8 +34,7 @@ namespace DogeWalletC
 
         private void NavToMain()
         {
-            string navTo = "/MainPage.xaml";
-            NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -77,8 +77,7 @@ namespace DogeWalletC
             APIKeySetting.Save();
 
             //Return to MainPage
-            string navTo = "/MainPage.xaml";
-            NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         // Litecoin
