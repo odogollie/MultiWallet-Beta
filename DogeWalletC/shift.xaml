@@ -18,11 +18,8 @@
 
     <phone:PhoneApplicationPage.Resources>
         
-        <!--<local:Currency x:Key="Currency"/>-->
-        <DataTemplate x:Name="modulePickerItemTemplate">
-            <StackPanel>
-                <TextBlock Text="{Binding currency}"/>
-            </StackPanel>
+        <DataTemplate x:Name="listPickerItemTemplate">
+            <TextBlock Text="{Binding currencys}"/>
         </DataTemplate>
         
 
@@ -46,11 +43,9 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Grid.RowDefinitions>
-                <!--<RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>-->
             </Grid.RowDefinitions>
             
 
@@ -58,22 +53,13 @@
                                 Margin="12,37,12,24"  
                                 VerticalAlignment="Top"
                                 SelectionChanged="SendCurrency_SelectionChanged"
-                                
-                                >
+                                Grid.Row="0"
+                                ItemTemplate="{Binding listPickerItemTemplate}"
+                                />
 
-                <toolkit:ListPickerItem x:Name="Doge" Content="Dogecoin"/>
-                <toolkit:ListPickerItem x:Name="Bit" Content="Bitcoin"/>
-                <toolkit:ListPickerItem x:Name="Lite" Content="Litecoin"/>
-
-            </toolkit:ListPicker>
-                                
-                                
-            
-
-                
-
-            <!--FullModeItemTemplate="{Binding PickerFullItemTemplate}" 
-                    ItemTemplate="{Binding modulePickerItemTemplate}"-->
+            <!--<toolkit:ListPickerItem x:Name="Doge" Content="Dogecoin"/>
+            <toolkit:ListPickerItem x:Name="Bit" Content="Bitcoin"/>
+            <toolkit:ListPickerItem x:Name="Lite" Content="Litecoin"/>-->
             
             <TextBlock
                 Name="WhichToSend"
@@ -84,21 +70,22 @@
                 />
 
             <toolkit:ListPicker x:Name="ReceiveCurrency"
-                                Margin="12,150,12,25"  
+                                Margin="12,37,12,25"  
                                 VerticalAlignment="Top"
                                 SelectionChanged="ReceiveCurrency_SelectionChanged"
                                 Grid.Row="1"
-                                >
-                                
-                <toolkit:ListPickerItem x:Name="Bit2" Content="Bitcoin"/>
-                <toolkit:ListPickerItem x:Name="Doge2" Content="Dogecoin"/>
-                <toolkit:ListPickerItem x:Name="Lite2" Content="Litecoin"/>
-            </toolkit:ListPicker>
+                                ItemTemplate="{Binding listPickerItemTemplate}"
+                                />
+
+            <!--<toolkit:ListPickerItem x:Name="Bit2" Content="Bitcoin"/>
+            <toolkit:ListPickerItem x:Name="Doge2" Content="Dogecoin"/>
+            <toolkit:ListPickerItem x:Name="Lite2" Content="Litecoin"/>-->
+
 
             <TextBlock
                 Name="WhichToReceive"
                 Grid.Row="1"
-                Margin="12,125,12,0"
+                Margin="12,10,12,0"
                 VerticalAlignment="Top"
                 Text="Receive:"
                 />
@@ -106,36 +93,50 @@
             <TextBox
                 Name="AmountBox"
                 Grid.Row="2"
-                Margin="0,250,0,0"
+                Margin="0,15,0,0"
                 InputScope="Number"
                 VerticalAlignment="Top"
                 />
             <TextBlock
                 Name="Amount"
                 Grid.Row="2"
-                Margin="12,225,12,0"
+                Margin="12,0,12,0"
                 VerticalAlignment="Top"
-                Text="Amount to Send:"
+                Text="Amount to receive:"
                 />
             <TextBox
                 Name="PinBox"
-                Grid.Row="3"
-                Margin="0,350,0,0"
+                Grid.Row="2"
+                Margin="0,100,0,0"
                 InputScope="Number"
                 VerticalAlignment="Top"
                 />
             <TextBlock
                 Name="Pin"
                 Grid.Row="3"
-                Margin="12,325,12,0"
-                Text="Pin:"
+                Margin="12,85,12,0"
+                Text="Block.io pin:"
                 VerticalAlignment="Top"
                 />
             <TextBlock
                 Text="Still under development!"
-                Grid.Row="4"
+                Grid.Row="3"
                 VerticalAlignment="Bottom"
                 />
+            <Button Content="Shift"
+                    VerticalAlignment="Top"
+                    Margin="0,175,0,0"
+                    Click="Shift_Click"
+                    Grid.Row="2"
+                    Width="175"
+                    HorizontalAlignment="Left"/>
+            <Button Content="Clear"
+                    VerticalAlignment="Top"
+                    Margin="0,175,0,0"
+                    Click="Clear_Click"
+                    Grid.Row="2"
+                    HorizontalAlignment="Right"
+                    Width="175"/>
 
 
         </Grid>
