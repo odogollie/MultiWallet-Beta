@@ -100,4 +100,12 @@ namespace DogeWalletC
             MessageBoxResult messageBox = MessageBox.Show(error, "Error!", MessageBoxButton.OK);
         }
     }
+
+    class Transaction
+    {
+        public string amount { get; set; }
+        public double withdrawl { get; set; }
+        public string pair { get; set; }
+        public string reutnr { get; set; }
+    }
 }
