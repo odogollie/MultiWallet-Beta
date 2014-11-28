@@ -20,4 +20,6 @@ Add address sweeping when block.io adds this to their api
 Bugs:
 =====
 
-None at the moment
+Crashing:
+  RM-914_eu_spain_251
+  RM-996_apac_vietnam_200
