@@ -107,5 +107,6 @@ namespace DogeWalletC
         public double withdrawl { get; set; }
         public string pair { get; set; }
         public string reutnr { get; set; }
+
     }
 }
