@@ -16,6 +16,7 @@ namespace DogeWalletC
         String[] currencys = {"Dogecoin", 
                                 "Bitcoin", 
                                 "Litecoin"};
+
         public shift()
         {
             InitializeComponent();
