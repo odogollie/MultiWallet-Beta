@@ -38,10 +38,10 @@
             <Image x:Name="QRImageHolder"
                    Source=""
                    HorizontalAlignment="Center"
-                   Height="250"
-                   Margin="0,0,0,0"
+                   Height="200"
+                   Margin="0,75,0,0"
                    VerticalAlignment="Top"
-                   Width="250"
+                   Width="200"
                    Grid.Row="1"/>
 
             <toolkit:ListPicker x:Name="CurrencyPicker" Margin="12,0,12,0"  
