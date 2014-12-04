@@ -126,10 +126,6 @@ namespace DogeWalletC
                     BitapiKeyInput.Text = "";
                 }
             }
-            
-
-
-
         }
 
         private void DisplayMessage(string network)
