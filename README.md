@@ -1,7 +1,7 @@
 MultiWallet
 ================
 
-Bitcoin, Litecoin, Dogecoin wallet for Windows Phone 8.1
+Bitcoin, Litecoin, Dogecoin wallet for Windows Phone 8.1 using Block.io API
 
 
 
