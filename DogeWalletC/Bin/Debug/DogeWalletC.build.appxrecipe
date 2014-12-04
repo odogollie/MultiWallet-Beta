@@ -330,12 +330,6 @@
     <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\cw.png">
       <PackagePath>cw.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\FlipCycleTileMedium.png">
-      <PackagePath>FlipCycleTileMedium.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\FlipCycleTileSmall.png">
-      <PackagePath>FlipCycleTileSmall.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\SquareTile150x150.png">
       <PackagePath>SquareTile150x150.png</PackagePath>
     </AppxPackagedFile>

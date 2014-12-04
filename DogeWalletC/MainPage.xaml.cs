@@ -103,7 +103,7 @@ namespace DogeWalletC
             try
             {
                 dogeresult = await client.GetStringAsync(dogeurl);
-                
+                setBalance("doge");
             }
             catch
             {
@@ -112,7 +112,7 @@ namespace DogeWalletC
             try
             {
                 bitresult = await client.GetStringAsync(biturl);
-                
+                setBalance("bit");
             }
             catch
             {
@@ -121,16 +121,16 @@ namespace DogeWalletC
             try
             {
                 literesult = await client.GetStringAsync(liteurl);
-                
+                setBalance("lite");
             }
             catch
             {
                 LitecoinBalance.Text = "Set API Key";
             }
 
-            setBalance("doge");
-            setBalance("bit");
-            setBalance("lite");
+            
+            
+            
             
         }
 
@@ -146,7 +146,7 @@ namespace DogeWalletC
                 string bal = String.Concat(doubleBal);
                 double unconBal = Double.Parse(DogeapiData.data.pending_received_balance);
 
-                DogecoinBalance.Text = bal.Substring(0, bal.Length - 5) + " Ð";
+                DogecoinBalance.Text = bal.Substring(0, bal.Length - 9) + " Ð";
                 DogeUnconfirmedBalance.Text = unconBal + " Ð";
             } 
             else if (net == "bit")
@@ -168,7 +168,7 @@ namespace DogeWalletC
                 string bal = String.Concat(doubleBal);
                 double unconBal = Double.Parse(LiteapiData.data.pending_received_balance);
 
-                LitecoinBalance.Text = bal + " Ł";
+                LitecoinBalance.Text = bal.Substring(0, bal.Length - 5) + " Ł";
                 LiteUnconfirmedBalance.Text = unconBal + " Ł";
             }
         }
