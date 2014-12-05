@@ -73,7 +73,7 @@
                      TextWrapping="Wrap"
                      Text="" 
                      VerticalAlignment="Bottom"
-                     InputScope="Number"
+                     
                      Width="456"
                      GotFocus="PinBox_GotFocus"
                      Grid.Row="3"
