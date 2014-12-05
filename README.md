@@ -8,6 +8,8 @@ Bitcoin, Litecoin, Dogecoin wallet for Windows Phone 8.1 using Block.io API
 TODO:
 =====
 
+Fix Crashing Issues
+
 Make Change log
 
 Add QR Scanner Support when trying to send Coin
