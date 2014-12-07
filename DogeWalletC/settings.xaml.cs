@@ -9,6 +9,8 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.IO.IsolatedStorage;
 using Windows.Web.Http;
+using Windows.System;
+using System.Reflection;
 
 namespace DogeWalletC
 {
@@ -189,7 +191,10 @@ namespace DogeWalletC
             NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
         }
 
-
+        private async void Block_Click(object sender, RoutedEventArgs e)
+        {
+            await Launcher.LaunchUriAsync(new Uri("https://www.block.io"));
+        }
 
     }
 }
