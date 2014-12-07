@@ -17,57 +17,30 @@ namespace DogeWalletC
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        private static string FIRST_RUN_FLAG = "FIRST_RUN_FLAG";
-        private static IsolatedStorageSettings firstRun = IsolatedStorageSettings.ApplicationSettings;
         IsolatedStorageSettings previousBal = IsolatedStorageSettings.ApplicationSettings;
         private string dogeresult;
         private string bitresult;
         private string literesult;
-        private string previousDoge = "0";
-        private string previousBit = "0";
-        private string previousLite = "0";
+        private string previousDoge = "Set API Key";
+        private string previousBit = "Set API Key";
+        private string previousLite = "Set API Key";
 
 
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
-            
+            BuildLocalizedApplicationBar();
             Refresh();
 
-            // Sample code to localize the ApplicationBar
-            BuildLocalizedApplicationBar();
+            getPreviousBal("PreviousDoge");
+            getPreviousBal("PreviousBit");
+            getPreviousBal("PreviousLite");
 
-
-        }
-
-        private void Set_API()
-        {
-            string navTo = "/settings.xaml";
-            NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
-        }
-
-        private bool IsFirstRun()
-        {
-            if (!firstRun.Contains(FIRST_RUN_FLAG))
-            {
-                //string navTo = "/settings.xaml";
-                //NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
-
-                firstRun.Add(FIRST_RUN_FLAG, false);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
 
         private async void Refresh()
         {
-
-
             HttpClient client = new HttpClient();
 
             //https://block.io/api/v2/get_balance/?api_key=
@@ -144,15 +117,8 @@ namespace DogeWalletC
                 DogeUnconfirmedBalance.Text = unconBal + " Ð";
 
                 // Set LocalAppSettings for Dogecoin Bal
-
-                /*if (!previousBal.Contains(previousDoge))
-                {
-                    previousBal.Add(previousDoge, bal.Substring(0, bal.Length - 9));
-                }
-                else
-                {
-                    previousBal[BitcoinAPIKey] = BitapiKeyInput.Text;
-                }*/
+                setPreviousBal("PreviousDoge", bal.Substring(0, bal.Length - 9) + " Ð");
+                
             } 
             else if (net == "bit")
             {
@@ -166,6 +132,8 @@ namespace DogeWalletC
                 BitUnconfirmedBalance.Text = unconBal + " ฿";
 
                 // Set LocalAppSettings for Dogecoin Bal
+
+                setPreviousBal("PreviousBit", bal + " ฿");
             }
             else if (net == "lite")
             {
@@ -179,6 +147,7 @@ namespace DogeWalletC
                 LiteUnconfirmedBalance.Text = unconBal + " Ł";
 
                 // Set LocalAppSettings for Dogecoin Bal
+                setPreviousBal("PreviousLite", bal.Substring(0, bal.Length - 5) + " Ł");
             }
         }
 
@@ -298,6 +267,50 @@ namespace DogeWalletC
             }
             return "NoAPI";
 
+        }
+
+        public void setPreviousBal(string network, string balance)
+        {
+            if (!previousBal.Contains(network))
+            {
+                previousBal.Add(network, balance);
+            }
+            else
+            {
+                previousBal[network] = balance;
+            }
+        }
+
+        public void getPreviousBal(string network)
+        {
+            if (network == "PreviousDoge")
+            {
+                if (previousBal.Contains(network))
+                {
+                    DogecoinBalance.Text = previousBal[network].ToString();
+                }
+                else
+                    DogecoinBalance.Text = "No Balance";
+            }
+            else if (network == "PreviousBit")
+            {
+                if (previousBal.Contains(network))
+                {
+                    BitcoinBalance.Text = previousBal[network].ToString();
+                }
+                else
+                    BitcoinBalance.Text = "No Balance";
+            }
+            else if (network == "PreviousLite")
+            {
+                if (previousBal.Contains(network))
+                {
+                    LitecoinBalance.Text = previousBal[network].ToString();
+                }
+                else
+                    LitecoinBalance.Text = "No Balance";
+            }
+            
         }
 
         /*private void Dogecoin_Tap(object sender, System.Windows.Input.GestureEventArgs e)
