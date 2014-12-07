@@ -108,7 +108,7 @@
                 Name="PinBox"
                 Grid.Row="2"
                 Margin="0,100,0,0"
-                InputScope="Number"
+                
                 VerticalAlignment="Top"
                 />
             <TextBlock

@@ -368,3 +368,11 @@ D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\P
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\MDILProjectFiles.xml
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\XapCacheFile.xml
 D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\shift.g.cs
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\System.Net.Http\layout.resfiles
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\System.Net.Http\layout.resfiles.intermediate
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\System.Net.Http\Resources.resfiles
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\System.Net.Http\Resources.resfiles.intermediate
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\System.Net.Http\pri.resfiles
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\System.Net.Http\pri.resfiles.intermediate
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\System.Net.Http\priconfig.xml
+D:\Program Files\Onedrive\Documents\Git\MultiWallet-Beta\DogeWalletC\obj\Debug\System.Net.Http\priconfig.xml.intermediate

@@ -8,6 +8,9 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.IO.IsolatedStorage;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace DogeWalletC
 {
@@ -25,6 +28,10 @@ namespace DogeWalletC
         }
         string sendCurrency = "DogecoinAPIKey";
         string receiveCurrency = "BitcoinAPIKey";
+        string pair = "btc_ltc";
+        
+        private string returnAddress;
+        private string receiveAddress;
 
         private void ReceiveCurrency_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -46,9 +53,9 @@ namespace DogeWalletC
 
             if (SendCurrency == null)
                 Read_API(sendCurrency);
-            else if (SendCurrency.SelectedIndex.Equals(1))
-                sendCurrency = "BitcoinAPIKey";
             else if (SendCurrency.SelectedIndex.Equals(0))
+                sendCurrency = "BitcoinAPIKey";
+            else if (SendCurrency.SelectedIndex.Equals(1))
                 sendCurrency = "DogecoinAPIKey";
             else if (SendCurrency.SelectedIndex.Equals(2))
                 sendCurrency = "LitecoinAPIKey";
@@ -81,10 +88,19 @@ namespace DogeWalletC
                 var sendAPI = Read_API(sendCurrency);
                 var receiveAPI = Read_API(receiveCurrency);
                 var amount = AmountBox.Text;
-                double amountD = Double.Parse(AmountBox.Text);
+                double amountD = 0;
+                try
+                {
+                    amountD = Double.Parse(amount);
+                }
+                catch
+                {
+                    DisplayMessage("Please set an amount to receive!");
+                }
+                //double amountD = Double.Parse(AmountBox.Text);
                 var pin = PinBox.Text;
 
-                if (amount == string.Empty || amountD == 0)
+                if (AmountBox.Text == string.Empty)
                 {
                     DisplayMessage("Please set an amount to receive!");
                 }
@@ -92,21 +108,163 @@ namespace DogeWalletC
                 {
                     DisplayMessage("Please Type in Pin!");
                 }
+
+                setPair();
+
+                getReceiveAddress(receiveCurrency);
+                getReturnAddress(sendCurrency);
+
+                try
+                {
+                                        
+                    HttpClient post = new HttpClient();
+
+                    post.BaseAddress = new Uri("http://shapeshift.io/sendamount");
+                    post.DefaultRequestHeaders.Accept.Clear();
+                    post.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    var transaction = new PostTransaction() { amount = amountD, pair = pair, returnAddress = returnAddress, withdrawal = receiveAddress };
+
+                    HttpResponseMessage response = PostAsync(transaction);
+
+                }
+                catch
+                {
+                    DisplayMessage("Failed!");
+                }
             }
 
+        }
+
+        
+
+        private void setPair()
+        {
+            if (sendCurrency == "BitcoinAPIKey")
+            {
+                pair = "btc_";
+                if (receiveCurrency == "LitecoinAPIKey")
+                {
+                    pair += "ltc";
+                }
+                else if (receiveCurrency == "DogecoinAPIKey")
+                {
+                    pair += "doge";
+                }
+            }
+            else if (sendCurrency == "LitecoinAPIKey")
+            {
+                pair = "ltc_";
+                if (receiveCurrency == "BitcoinAPIKey")
+                {
+                    pair += "btc";
+                }
+                else if (receiveCurrency == "DogecoinAPIKey")
+                {
+                    pair += "doge";
+                }
+            }
+            else if (sendCurrency == "DogecoinAPIKey")
+            {
+                pair = "doge_";
+                if (receiveCurrency == "LitecoinAPIKey")
+                {
+                    pair += "ltc";
+                }
+                else if (receiveCurrency == "BitcoinAPIKey")
+                {
+                    pair += "btc";
+                }
+            }
         }
         private void DisplayMessage(string error)
         {
             MessageBoxResult messageBox = MessageBox.Show(error, "Error!", MessageBoxButton.OK);
         }
+
+        private async void getReturnAddress(string network)
+        {
+            var apiKey = Read_API(network);
+
+            string url = "https://block.io/api/v2/get_new_address/" +
+                "?api_key={0}";
+
+            string baseUrl = string.Format(url,
+                apiKey);
+
+            try
+            {
+                HttpClient client = new HttpClient();
+
+                string result = await client.GetStringAsync(baseUrl);
+
+                APIReceive apiData = JsonConvert.DeserializeObject<APIReceive>(result);
+
+                returnAddress = apiData.data.address;
+                
+            }
+            catch
+            {
+                DisplayMessage("Error Getting Return Address!");
+            }
+
+        }
+        private async void getReceiveAddress(string receiveCurrency)
+        {
+
+            var apiKey = Read_API(receiveCurrency);
+
+            string url = "https://block.io/api/v2/get_new_address/" +
+                "?api_key={0}";
+
+            string baseUrl = string.Format(url,
+                apiKey);
+
+            try
+            {
+                HttpClient client = new HttpClient();
+
+                string result = await client.GetStringAsync(baseUrl);
+
+                APIReceive apiData = JsonConvert.DeserializeObject<APIReceive>(result);
+
+                receiveAddress = apiData.data.address;
+            }
+            catch
+            {
+
+            }
+        }
+        
     }
 
-    class Transaction
+    public class Transaction
     {
-        public string amount { get; set; }
-        public double withdrawl { get; set; }
-        public string pair { get; set; }
-        public string reutnr { get; set; }
+        public string status { get; set; }
+        public string address { get; set; }
+        public string withdraw { get; set; }
+        public double incomingCoin { get; set; }
+        public string incomingType { get; set; }
+        public string outgoingCoin { get; set; }
+        public string outgoingType { get; set; }
+        public string transaction { get; set; }
+        public string error { get; set; }
 
     }
+
+    public class DepositLimit
+    {
+        public string pair { get; set; }
+        public string limit { get; set; }
+    }
+
+    public class PostTransaction
+    {
+        public double amount { get; set; }
+        public string withdrawal { get; set; }
+        public string pair { get; set; }
+        public string returnAddress { get; set; }
+    }
+
+
 }
