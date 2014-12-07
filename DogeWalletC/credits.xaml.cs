@@ -18,7 +18,7 @@ namespace DogeWalletC
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
-            Version.Text = "Version: " + GetVersion();
+            Version.Text = "Version: " + "1.4.1.1";
         }
 
         private void BuildLocalizedApplicationBar()
@@ -94,6 +94,14 @@ namespace DogeWalletC
                 return versionAttribute.Version;
             }
             return "";
+        }
+        private async void Block_Click(object sender, RoutedEventArgs e)
+        {
+            await Launcher.LaunchUriAsync(new Uri("https://www.block.io"));
+        }
+        private async void Source_Click(object sender, RoutedEventArgs e)
+        {
+            await Launcher.LaunchUriAsync(new Uri("https://github.com/oshank/MultiWallet-Beta"));
         }
     }
 

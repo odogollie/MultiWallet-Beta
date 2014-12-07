@@ -19,10 +19,13 @@ namespace DogeWalletC
     {
         private static string FIRST_RUN_FLAG = "FIRST_RUN_FLAG";
         private static IsolatedStorageSettings firstRun = IsolatedStorageSettings.ApplicationSettings;
+        IsolatedStorageSettings previousBal = IsolatedStorageSettings.ApplicationSettings;
         private string dogeresult;
         private string bitresult;
         private string literesult;
-
+        private string previousDoge = "0";
+        private string previousBit = "0";
+        private string previousLite = "0";
 
 
         // Constructor
@@ -30,23 +33,8 @@ namespace DogeWalletC
         {
             InitializeComponent();
 
-            // Set up first time start up to set api
             
-            /*if (IsFirstRun())
-            {
-                NavigationService.Navigate(new Uri("/settings.xaml", UriKind.RelativeOrAbsolute));
-            }
-            
-            else
-            {*/
-            if (Read_API("btc") == "NoAPI" || Read_API("doge") == "NoAPI" || Read_API("lite") == "NoAPI")
-            {
-                //DisplayMessage();
-            }
-            else
-                Refresh();
-
-            //Refresh();
+            Refresh();
 
             // Sample code to localize the ApplicationBar
             BuildLocalizedApplicationBar();
@@ -104,6 +92,8 @@ namespace DogeWalletC
             {
                 dogeresult = await client.GetStringAsync(dogeurl);
                 setBalance("doge");
+
+                
             }
             catch
             {
@@ -113,6 +103,8 @@ namespace DogeWalletC
             {
                 bitresult = await client.GetStringAsync(biturl);
                 setBalance("bit");
+                
+
             }
             catch
             {
@@ -122,6 +114,8 @@ namespace DogeWalletC
             {
                 literesult = await client.GetStringAsync(liteurl);
                 setBalance("lite");
+                
+
             }
             catch
             {
@@ -148,6 +142,17 @@ namespace DogeWalletC
 
                 DogecoinBalance.Text = bal.Substring(0, bal.Length - 9) + " Ð";
                 DogeUnconfirmedBalance.Text = unconBal + " Ð";
+
+                // Set LocalAppSettings for Dogecoin Bal
+
+                /*if (!previousBal.Contains(previousDoge))
+                {
+                    previousBal.Add(previousDoge, bal.Substring(0, bal.Length - 9));
+                }
+                else
+                {
+                    previousBal[BitcoinAPIKey] = BitapiKeyInput.Text;
+                }*/
             } 
             else if (net == "bit")
             {
@@ -159,6 +164,8 @@ namespace DogeWalletC
 
                 BitcoinBalance.Text = bal + " ฿";
                 BitUnconfirmedBalance.Text = unconBal + " ฿";
+
+                // Set LocalAppSettings for Dogecoin Bal
             }
             else if (net == "lite")
             {
@@ -170,6 +177,8 @@ namespace DogeWalletC
 
                 LitecoinBalance.Text = bal.Substring(0, bal.Length - 5) + " Ł";
                 LiteUnconfirmedBalance.Text = unconBal + " Ł";
+
+                // Set LocalAppSettings for Dogecoin Bal
             }
         }
 

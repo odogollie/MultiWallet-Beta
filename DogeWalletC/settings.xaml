@@ -104,11 +104,11 @@
                        VerticalAlignment="Top"
                        HorizontalAlignment="Center"
                        Margin="0,25,0,0"/>
-            <TextBlock Text="If you don't have a Block.io account, get one here"
+            <!--<TextBlock Text="If you don't have a Block.io account, get one here"
                        Grid.Row="4"
                        VerticalAlignment="Top"
                        HorizontalAlignment="Center"
-                       Margin="0,60,0,0"/>
+                       Margin="0,60,0,0"/>-->
             <Button Name="BlockButton"
                     Content="Block.io"
                     Click="Block_Click"

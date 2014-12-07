@@ -51,20 +51,31 @@
                        Text="API: Block.io and Dogechain.info" 
                        VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" 
-                       Margin="10,422,0,0" 
+                       Margin="10,370,0,0" 
                        TextWrapping="Wrap" 
-                       Text="I (/u/odog_) am not responsible for any lost Dogecoin, Litecoin, or Bitcoin and their respective Testnets."
+                       Text="Oliver &amp; Co. is not responsible for any lost Dogecoin, Litecoin, or Bitcoin and their respective Testnets."
                        VerticalAlignment="Top"/>
             <Button Content="Rate and Review" 
                     HorizontalAlignment="Left" 
-                    Margin="10,207,0,0" 
+                    Margin="10,149,0,0" 
                     VerticalAlignment="Top"
                     Click="Rate_Click"/>
             <Button Content="Feedback" 
                     HorizontalAlignment="Left" 
-                    Margin="10,279,0,0" 
+                    Margin="10,221,0,0" 
                     VerticalAlignment="Top"
                     Click="FeedBack_Click"/>
+            <Button Content="Block.io"
+                    HorizontalAlignment="Left"
+                    Margin="10,293,0,0"
+                    VerticalAlignment="Top"
+                    Click="Block_Click"/>
+            <Button Content="Source"
+                    HorizontalAlignment="Left"
+                    Margin="10,455,0,0"
+                    VerticalAlignment="Top"
+                    Click="Source_Click"/>
+
 
 
         </Grid>
