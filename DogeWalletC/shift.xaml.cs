@@ -85,7 +85,7 @@ namespace DogeWalletC
             }
             else
             {
-                /*var sendAPI = Read_API(sendCurrency);
+                var sendAPI = Read_API(sendCurrency);
                 var receiveAPI = Read_API(receiveCurrency);
                 var amount = AmountBox.Text;
                 double amountD = 0;
@@ -131,7 +131,7 @@ namespace DogeWalletC
                 catch
                 {
                     DisplayMessage("Failed!");
-                }*/
+                }
             }
 
         }
