@@ -85,6 +85,7 @@ namespace DogeWalletC
             }
             else
             {
+                //words here
                 var sendAPI = Read_API(sendCurrency);
                 var receiveAPI = Read_API(receiveCurrency);
                 var amount = AmountBox.Text;
