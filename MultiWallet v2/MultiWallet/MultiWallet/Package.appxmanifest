@@ -17,6 +17,7 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MultiWallet.App">
       <m3:VisualElements DisplayName="MultiWallet" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="MultiWallet" ForegroundText="light" BackgroundColor="transparent" ToastCapable="false">
+        <m3:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
         <m3:DefaultTile Square71x71Logo="Assets\Square71x71Logo.png">
           <m3:ShowNameOnTiles>
             <m3:ShowOn Tile="square150x150Logo" />
