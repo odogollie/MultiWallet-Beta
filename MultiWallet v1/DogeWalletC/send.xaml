@@ -130,6 +130,16 @@
                        Text="1 Doge/.01 mBTC/1 mLTC" 
                        VerticalAlignment="Top"
                        Grid.Row="4"/>
+            <ProgressBar x:Name="ProgressBar"
+                         Visibility="Collapsed"
+                         HorizontalAlignment="Stretch"
+                         IsEnabled="False"
+                         IsIndeterminate="True"
+                         Height="4"
+                         Margin="0,10,0,0"
+                         Grid.Row="4"
+                         VerticalAlignment="Top"
+                         />
 
 
         </Grid>

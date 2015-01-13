@@ -24,6 +24,7 @@ namespace DogeWalletC
         private string previousDoge = "Set API Key";
         private string previousBit = "Set API Key";
         private string previousLite = "Set API Key";
+        const string settingsAppLaunched = "appLaunched";
 
 
         // Constructor
@@ -37,10 +38,35 @@ namespace DogeWalletC
             getPreviousBal("PreviousBit");
             getPreviousBal("PreviousLite");
 
+            if (IsFirstLaunch()){
+            
+                DisplayMessage("Coming Soon, if you want to see a specific change use the feedback button in the credits!", "Major Changes!");
+                Launched();
+            }
+            
+
+        }
+
+    private static bool IsFirstLaunch()
+        {
+            IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+            
+            return !(settings.Contains(settingsAppLaunched));
+        }
+
+        private static void Launched()
+        {
+            if (IsFirstLaunch())
+            {
+                IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+                settings.Add(settingsAppLaunched, true);
+                settings.Save();
+            }
         }
 
         private async void Refresh()
         {
+            ProgressBar.Visibility = Visibility.Visible;
             HttpClient client = new HttpClient();
 
             //https://block.io/api/v2/get_balance/?api_key=
@@ -95,8 +121,8 @@ namespace DogeWalletC
                 LitecoinBalance.Text = "Set API Key";
             }
 
-            
-            
+
+            ProgressBar.Visibility = Visibility.Collapsed;
             
             
         }
@@ -221,7 +247,7 @@ namespace DogeWalletC
         {
             if (Read_API("doge") == "NoAPI" && Read_API("btc") == "NoAPI" && Read_API("ltc") == "NoAPI")
             {
-                DisplayMessage();
+                DisplayMessage("Please Set All 3 API Keys In Settings","Error!");
             }else{
                 Refresh();
             }
@@ -229,9 +255,9 @@ namespace DogeWalletC
             
         }
 
-        private void DisplayMessage()
+        private void DisplayMessage(string message, string error)
         {
-            MessageBoxResult messageBox = MessageBox.Show("Error!", "Please set all 3 API Keys in Settings", MessageBoxButton.OK);
+            MessageBoxResult messageBox = MessageBox.Show(message, error, MessageBoxButton.OK);
         }
         // Click event for Send
         private void SendClick(object sender, EventArgs e)

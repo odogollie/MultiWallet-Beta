@@ -39,6 +39,8 @@ namespace DogeWalletC
 
         private async void SendButton_Click(object sender, RoutedEventArgs e)
         {
+            ProgressBar.Visibility = Visibility.Visible;
+
             // Constuct Url using Box Data
             HttpClient client = new HttpClient();
 
@@ -78,8 +80,8 @@ namespace DogeWalletC
             {
                 ErrorMessage();
             }
-               
-            
+
+            ProgressBar.Visibility = Visibility.Collapsed;
         }
 
         private void DisplayMessage(string amount, string address, string network)
