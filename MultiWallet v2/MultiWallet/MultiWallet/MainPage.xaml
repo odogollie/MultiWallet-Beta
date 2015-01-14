@@ -6,6 +6,8 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -13,14 +15,14 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
 
+    <!--Currency Symbols-->
+    <!--฿ Ł Ð-->
+    
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="#1faa4a">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Visibility="Visible">
+    <Grid x:Name="RootLayout" Background="Black">
+        
+        <!--Start of Loading Page-->
+        <Grid x:Name="loadingPage" Margin="0,0,0,0" Visibility="Visible" Background="#1faa4a">
 
             <Image VerticalAlignment="Center"
                    HorizontalAlignment="Center"
@@ -35,12 +37,15 @@
                          Height="4"
                          HorizontalAlignment="Stretch"
                          Margin="0,75,0,0"
-                         VerticalAlignment="Center" Foreground="White" Background="#19FF0000"
-                         
+                         VerticalAlignment="Center" Foreground="White"
                          />
 
         </Grid>
-        
+        <!--End of Loading Page-->
+
+
+        <!--Start of Home Page-->
+
         <Grid x:Name="HomeLoaded" Background="Black" Grid.RowSpan="2" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -56,6 +61,54 @@
             <!--ContentPanel - place additional content here-->
             <Grid x:Name="LoadedContentPanel" Grid.Row="1" Margin="12,0,12,0">
 
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+
+                    <toolkit:ListPicker x:Name="CurrencyPickerHome"
+                                    SelectionChanged="CurrencyPickerHome_SelectionChanged"
+                                    Grid.Row="0"
+                                    >
+                        <toolkit:ListPickerItem x:Name="0" Content="Bitcoin"/>
+                        <toolkit:ListPickerItem x:Name="1" Content="Litecoin"/>
+                        <toolkit:ListPickerItem x:Name="2" Content="Dogecoin"/>
+
+
+                    </toolkit:ListPicker>
+
+                    <TextBlock x:Name="Balance"
+                               Grid.Row="1"
+                               FontSize="35"
+                               Text="1.42 ฿"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top"
+                               Margin="0,10,0,10"/>
+                    <Image Source=""
+                           Grid.Row="2"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" 
+                           Width="200"
+                           Height="200"
+                           Margin="0,10,0,10"
+                           />
+                    <TextBlock Name="TransactionTitle"
+                               Grid.Row="3"
+                               FontSize="28"
+                               Text="Recent Transactions:"
+                               Margin="12,10,12,0"/>
+                    <TextBlock Name="Transactions"
+                               Grid.Row="4"
+                               Text="Stuff goes here"
+                               FontSize="24"
+                               Margin="12,10,12,10"/>
+
+                </Grid>
 
 
             </Grid>
@@ -63,8 +116,11 @@
 
 
         </Grid>
+        <!--End of Home Page-->
 
-        <Grid x:Name="SettingsLoaded" Background="Black" Grid.RowSpan="2" Visibility="Collapsed">
+
+        <!--Start of settings Page-->
+        <Grid x:Name="SettingsLoaded" Background="Black" Grid.RowSpan="2" Visibility="Visible">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -73,27 +129,91 @@
             <!--TitlePanel contains the name of the application and page title-->
             <StackPanel Grid.Row="0" Margin="12,17,0,28">
                 <TextBlock Text="MULTIWALLET" Style="{StaticResource PhoneTextNormalStyle}"/>
-                <TextBlock Text="settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+                <TextBlock Text="welcome" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
             </StackPanel>
 
             <!--ContentPanel - place additional content here-->
             <Grid x:Name="SettingsContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                
+                <!--Row 0 Start-->
+                <TextBlock Text="Please input your Block.io API Keys."
+                           Grid.Row="0"
+                           TextWrapping="Wrap"
+                           FontSize="29"
+                           Margin="0,10,0,30"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                <!--Row 0 End-->
+                
+                <!--Row 1 Start-->
+                <TextBlock Text="Bitcoin:"
+                           Grid.Row="1"
+                           Margin="12,0,0,20"
+                           FontSize="23"/>
+                <TextBox x:Name="BitcoinAPIBox"
+                         Grid.Row="1"
+                         Margin="0,25,0,20"/>
+                <!--Row 1 End-->
+                
+                <!--Row 2 Start-->
 
+                <TextBlock Text="Litecoin:"
+                           Grid.Row="2"
+                           Margin="12,0,0,20"
+                           FontSize="23"/>
+                <TextBox x:Name="LitecoinAPIBox"
+                         Grid.Row="2"
+                         Margin="0,25,0,20"/>
 
+                <!--Row 2 End-->
+                
+                <!--Row 3 Start-->
 
+                <TextBlock Text="Dogecoin:"
+                           Grid.Row="3"
+                           Margin="12,0,0,20"
+                           FontSize="23"/>
+                <TextBox x:Name="DogecoinAPIBox"
+                         Grid.Row="3"
+                         Margin="0,25,0,20"/>
+
+                <!--Row 3 End-->
+                
+                <!--Row 4 Start-->
+                
+                <TextBlock Text="Select Default Currency:"
+                           Grid.Row="4"
+                           Margin="12,0,0,0"
+                           FontSize="23"/>
+                <toolkit:ListPicker x:Name="DefaultListPicker"
+                                    Grid.Row="4"
+                                    Margin="0,25,0,0">
+
+                    <toolkit:ListPickerItem x:Name="Doge" Content="Bitcoin"/>
+                    <toolkit:ListPickerItem x:Name="Bit" Content="Litecoin"/>
+                    <toolkit:ListPickerItem x:Name="Lite" Content="Dogecoin"/>
+                    
+                </toolkit:ListPicker>
+
+                    <!--Row 4 End-->
+                
             </Grid>
 
 
 
         </Grid>
+        <!--End of settings Page-->
 
-        <!--Uncomment to see an alignment grid to help ensure your controls are
-            aligned on common boundaries.  The image has a top margin of -32px to
-            account for the System Tray. Set this to 0 (or remove the margin altogether)
-            if the System Tray is hidden.
-
-            Before shipping remove this XAML and the image itself.-->
-        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
     </Grid>
+    
+    
+    <!--#1faa4a-->
 
 </phone:PhoneApplicationPage>

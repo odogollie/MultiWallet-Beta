@@ -23,20 +23,21 @@ namespace MultiWallet
 
             // Check to see if First Run
 
-            /*if (IsFirstLaunch())
+            if (IsFirstLaunch())
             {
                 global_methods.DisplayMessage("Please Set API Keys", "First Launch");
                 Launched();
 
-                // Send to first_run.xaml
-                NavigationService.Navigate(new Uri("/first_run.xaml", UriKind.Absolute));
+                // Change View to set API keys
+                
+                HomeLoaded.Visibility = Visibility.Collapsed;
+                SettingsLoaded.Visibility = Visibility.Visible;
+                
+
+
+                
             }
-            else
-            {
-                //string navTo = "home.xaml";
-                //NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
-                //GoHome();
-            } */
+            
 
         }
 
@@ -57,36 +58,18 @@ namespace MultiWallet
             }
         }
 
-        private void DisplayMessage(string message, string title)
-        {
-            MessageBoxResult messageBox = MessageBox.Show(message, title, MessageBoxButton.OK);
-        }
-
+        // Page Navigation service 
         private void NavTo(string uri)
         {
             NavigationService.Navigate(new Uri(uri, UriKind.RelativeOrAbsolute));
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        // Changed Currency on home page
+        private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            LoadingBar.Visibility = Visibility.Collapsed;
 
-            /*if (IsFirstLaunch())
-            {
-                //global_methods.DisplayMessage("Please Set API Keys", "First Launch");
-                Launched();
-
-                // Send to first_run.xaml
-                //NavigationService.Navigate(new Uri("/first_run.xaml", UriKind.Absolute));
-                NavTo("/first_run.xaml");
-            }
-            else
-            {
-                //string navTo = "home.xaml";
-                //NavigationService.Navigate(new Uri(navTo, UriKind.RelativeOrAbsolute));
-                NavTo("/home.xaml");
-            }*/
         }
             
 
