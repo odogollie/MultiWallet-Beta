@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using MultiWallet.Resources;
 using System.IO.IsolatedStorage;
 
+
 namespace MultiWallet
 {
     public partial class MainPage : PhoneApplicationPage
@@ -31,14 +32,33 @@ namespace MultiWallet
                 // Change View to set API keys
                 
                 HomeLoaded.Visibility = Visibility.Collapsed;
-                SettingsLoaded.Visibility = Visibility.Visible;
+                SettingsLoaded.Visibility = Visibility.Visible;  
+            }
+            else
+            {
+                // Get and Set Balances before changing to Home Screen
+
+                // get Deflaut Currency balance
+                setBalance(block_io.getBalance());
+
                 
 
+                
+
+                // Change View to Home
+
+                SettingsLoaded.Visibility = Visibility.Collapsed;
+                HomeLoaded.Visibility = Visibility.Visible;
 
                 
             }
             
 
+        }
+
+        private void setBalance(string balance)
+        {
+            
         }
 
         private static bool IsFirstLaunch()
@@ -69,7 +89,7 @@ namespace MultiWallet
         // Changed Currency on home page
         private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
             
 

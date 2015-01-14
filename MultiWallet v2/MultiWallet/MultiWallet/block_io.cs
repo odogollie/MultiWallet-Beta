@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace MultiWallet
 {
@@ -14,25 +15,25 @@ namespace MultiWallet
 
 
         // Get current account balance for specific api
-        public string getBalance()
+        internal static string getBalance()
         {
             return "";
         }
 
         // Get a new address from the api provided
-        public string getNewAddress()
+        internal static string getNewAddress()
         {
             return "";
         }
 
         // Get the address with the ID of 0
-        public string getOldAddress()
+        internal static string getOldAddress()
         {
             return "";
         }
 
         // Get the last 5 Transactions for the entire account
-        public string getLast5Transactions()
+        internal static string getLast5Transactions()
         {
             return "";
         }
