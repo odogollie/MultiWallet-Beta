@@ -20,7 +20,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Visibility="Visible">
 
             <Image VerticalAlignment="Center"
                    HorizontalAlignment="Center"
@@ -35,13 +35,54 @@
                          Height="4"
                          HorizontalAlignment="Stretch"
                          Margin="0,75,0,0"
-                         VerticalAlignment="Center"
+                         VerticalAlignment="Center" Foreground="White" Background="#19FF0000"
+                         
                          />
-            <Button Content="Click Me"
-                    HorizontalAlignment="Center"
-                    Margin="0,200,0,0"
-                    VerticalAlignment="Center"
-                    Click="Button_Click"/>
+
+        </Grid>
+        
+        <Grid x:Name="HomeLoaded" Background="Black" Grid.RowSpan="2" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock Text="MULTIWALLET" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock Text="home" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="LoadedContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+
+
+            </Grid>
+
+
+
+        </Grid>
+
+        <Grid x:Name="SettingsLoaded" Background="Black" Grid.RowSpan="2" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock Text="MULTIWALLET" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock Text="settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="SettingsContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+
+
+            </Grid>
+
 
 
         </Grid>
