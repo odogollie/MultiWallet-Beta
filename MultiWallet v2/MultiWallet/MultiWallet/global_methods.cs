@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.IO.IsolatedStorage;
+using Newtonsoft.Json;
 
 namespace MultiWallet
 {
@@ -34,13 +36,41 @@ namespace MultiWallet
         internal static string GetDefaultCurrency()
         {
             // Read isolated storage value for default currency
-            return "";
+            IsolatedStorageSettings CurrencySettings = IsolatedStorageSettings.ApplicationSettings;
+            if (!CurrencySettings.Contains("DefaultCurrency"))
+            {
+                return "Bitcoin";
+            }
+            else
+            {
+                return CurrencySettings["DefaultCurrency"].ToString();
+            }
+
+            
         }
 
         // Set Default Currency
-        internal static void SetDefaultCurrency()
+        internal static void SetDefaultCurrency(string defaultCurrency)
         {
             // Set isolated storage value of default currency
+
+            IsolatedStorageSettings CurrencySettings = IsolatedStorageSettings.ApplicationSettings;
+
+            if (!CurrencySettings.Contains("DefaultCurrency"))
+            {
+                CurrencySettings.Add("DefaultCurrency", defaultCurrency);
+                CurrencySettings.Save();
+            }
+            else
+            {
+                CurrencySettings.Remove("DefaultCurrency");
+                CurrencySettings.Add("DefaultCurrency", defaultCurrency);
+                CurrencySettings.Save();
+            }
+
+            
+
+
         }
 
 

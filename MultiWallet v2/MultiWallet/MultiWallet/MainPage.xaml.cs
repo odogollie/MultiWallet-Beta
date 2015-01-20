@@ -30,6 +30,7 @@ namespace MultiWallet
                 Launched();
 
                 // Change View to set API keys
+                global_methods.SetDefaultCurrency("Bitcoin");
                 
                 HomeLoaded.Visibility = Visibility.Collapsed;
                 SettingsLoaded.Visibility = Visibility.Visible;  
@@ -39,12 +40,10 @@ namespace MultiWallet
                 // Get and Set Balances before changing to Home Screen
 
                 // get Deflaut Currency balance
-                setBalance(block_io.getBalance());
+                // get balance for default currency (Passing APIKey for Default Currency
+                setBalance(block_io_data.getBalance(global_methods.ReadAPIKey(global_methods.GetDefaultCurrency())), global_methods.GetDefaultCurrency());
 
                 
-
-                
-
                 // Change View to Home
 
                 SettingsLoaded.Visibility = Visibility.Collapsed;
@@ -56,8 +55,22 @@ namespace MultiWallet
 
         }
 
-        private void setBalance(string balance)
+        private void setBalance(string balance, string currency)
         {
+            
+            // Get default currency from global methods
+            switch (currency){
+                case "Bitcoin":
+                    BalanceBlock.Text = balance + " ฿";
+                    break;
+                case "Litecoin":
+                    BalanceBlock.Text = balance + " Ł";
+                    break;
+                case "Dogecoin":
+                    BalanceBlock.Text = balance + " Ð";
+                    break;
+            }
+            
             
         }
 

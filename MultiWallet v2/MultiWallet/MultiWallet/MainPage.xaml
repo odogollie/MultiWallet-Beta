@@ -7,7 +7,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-    
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -46,7 +45,7 @@
 
         <!--Start of Home Page-->
 
-        <Grid x:Name="HomeLoaded" Background="Black" Grid.RowSpan="2" Visibility="Visible">
+        <Grid x:Name="HomeLoaded" Background="Black" Grid.RowSpan="2" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -75,9 +74,9 @@
                                     SelectionChanged="CurrencyPickerHome_SelectionChanged"
                                     Grid.Row="0"
                                     >
-                        <toolkit:ListPickerItem x:Name="0" Content="Bitcoin"/>
-                        <toolkit:ListPickerItem x:Name="1" Content="Litecoin"/>
-                        <toolkit:ListPickerItem x:Name="2" Content="Dogecoin"/>
+                        <toolkit:ListPickerItem x:Name="one" Content="Bitcoin"/>
+                        <toolkit:ListPickerItem x:Name="two" Content="Litecoin"/>
+                        <toolkit:ListPickerItem x:Name="three" Content="Dogecoin"/>
 
 
                     </toolkit:ListPicker>
@@ -88,7 +87,9 @@
                                Text="1.42 ฿"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top"
-                               Margin="0,10,0,10"/>
+                               Margin="0,10,0,10"
+                               />
+                    
                     <Image x:Name="QRImage"
                            Source=""
                            Grid.Row="2"
