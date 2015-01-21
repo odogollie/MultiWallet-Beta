@@ -8,7 +8,7 @@ using System.Net.Http;
 
 namespace MultiWallet
 {
-    class block_io_data
+    class block_io
     {
 
         // Block.io base API Url
@@ -20,14 +20,14 @@ namespace MultiWallet
         internal static string getBalance(string apiKey)
         {
 
-            block_io_data.setLocalBalance(apiKey);
+            setLocalBalance(apiKey);
             return localBalance;
 
             
         }
 
         // Helper method for getBalance()
-        private async void setLocalBalance(string apiKey)
+        internal async void setLocalBalance(string apiKey)
         {
             HttpClient client = new HttpClient();
             string url = baseUrl + "get_balance/?api_key=" + apiKey;
@@ -39,6 +39,8 @@ namespace MultiWallet
 
                 block_io_root apiData = JsonConvert.DeserializeObject<block_io_root>(result);
 
+
+                localBalance = apiData.data.available_balance;
 
             }
             catch
