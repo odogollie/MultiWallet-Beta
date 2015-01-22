@@ -9,6 +9,9 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MultiWallet.Resources;
 using System.IO.IsolatedStorage;
+using BlockIo;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 
 namespace MultiWallet
@@ -16,6 +19,7 @@ namespace MultiWallet
     public partial class MainPage : PhoneApplicationPage
     {
         const string settingsAppLaunched = "appLaunched";
+        private string localBalance = "";
 
         // Constructor
         public MainPage()
@@ -41,8 +45,9 @@ namespace MultiWallet
 
                 // get Deflaut Currency balance
                 // get balance for default currency (Passing APIKey for Default Currency
-                setBalance(block_io_data.getBalance(global_methods.ReadAPIKey(global_methods.GetDefaultCurrency())), global_methods.GetDefaultCurrency());
 
+
+                var blockioClient = new BlockIoClient(global_methods.ReadAPIKey(global_methods.GetDefaultCurrency()));
                 
                 // Change View to Home
 
@@ -55,9 +60,18 @@ namespace MultiWallet
 
         }
 
-        private void setBalance(string balance, string currency)
+       /* private void setBalance(string currencyOverride)
         {
-            
+            getBalance(global_methods.ReadAPIKey(global_methods.GetDefaultCurrency()));
+            string currency = global_methods.GetDefaultCurrency();
+
+            // Check to see if currency override is different then default currency
+            if (!currencyOverride.Equals(currency))
+            {
+                currency = currencyOverride;
+            }
+
+            string balance = localBalance;
             // Get default currency from global methods
             switch (currency){
                 case "Bitcoin":
@@ -73,6 +87,28 @@ namespace MultiWallet
             
             
         }
+
+        private async void getBalance(string apiKey)
+        {
+            HttpClient client = new HttpClient();
+            string url = block_io.baseUrl + "get_balance/?api_key=" + apiKey;
+
+            try
+            {
+                string result = await client.GetStringAsync(url);
+
+
+                block_io_root apiData = JsonConvert.DeserializeObject<block_io_root>(result);
+
+
+                localBalance = apiData.data.available_balance;
+
+            }
+            catch
+            {
+                localBalance = "error";
+            }
+        } */
 
         private static bool IsFirstLaunch()
         {

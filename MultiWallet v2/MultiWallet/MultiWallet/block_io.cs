@@ -12,22 +12,22 @@ namespace MultiWallet
     {
 
         // Block.io base API Url
-        const string baseUrl = "https://block.io/api/v2/";
-        static string localBalance = "";
+        public const string baseUrl = "https://block.io/api/v2/";
+        private string localBalance = "";
 
 
         // Get current account balance for specific api
-        internal static string getBalance(string apiKey)
+        internal string getBalance(string apiKey)
         {
 
             setLocalBalance(apiKey);
-            return localBalance;
+            return this.localBalance;
 
             
         }
 
         // Helper method for getBalance()
-        internal async void setLocalBalance(string apiKey)
+        private async void setLocalBalance(string apiKey)
         {
             HttpClient client = new HttpClient();
             string url = baseUrl + "get_balance/?api_key=" + apiKey;

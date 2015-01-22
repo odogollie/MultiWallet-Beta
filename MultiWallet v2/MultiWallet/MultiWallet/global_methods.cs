@@ -22,7 +22,45 @@ namespace MultiWallet
         internal static string ReadAPIKey(string network)
         {
             // Read isolated storage for api key for specific network
-            return "";
+            IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+
+            string apiKey = "";
+
+            switch (network)
+            {
+                case "Bitcoin":
+                    if (!settings.Contains("Bitcoin"))
+                    {
+                        DisplayMessage("No API Key set for Bitcoin!", "Error!");
+                    }
+                    else
+                    {
+                        apiKey = settings["Bitcoin"].ToString();
+                    }
+                    break;
+                case "Litecoin":
+                    if (!settings.Contains("Litecoin"))
+                    {
+                        DisplayMessage("No API Key set for Litecoin!", "Error!");
+                    }
+                    else
+                    {
+                        apiKey = settings["Litecoin"].ToString();
+                    }
+                    break;
+                case "Dogecoin":
+                    if (!settings.Contains("Dogecoin"))
+                    {
+                        DisplayMessage("No API Key set for Dogecoin!", "Error!");
+                    }
+                    else
+                    {
+                        apiKey = settings["Dogecoin"].ToString();
+                    }
+                    break;
+            }
+
+            return apiKey;
         }
 
         // Save API Keys
