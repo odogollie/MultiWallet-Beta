@@ -121,7 +121,7 @@
 
 
         <!--Start of settings Page-->
-        <Grid x:Name="SettingsLoaded" Background="Black" Grid.RowSpan="2" Visibility="Collapsed">
+        <Grid x:Name="SettingsLoaded" Background="Black" Grid.RowSpan="2" Visibility="Visible">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -136,6 +136,7 @@
             <!--ContentPanel - place additional content here-->
             <Grid x:Name="SettingsContentPanel" Grid.Row="1" Margin="12,0,12,0">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -160,7 +161,8 @@
                            FontSize="23"/>
                 <TextBox x:Name="BitcoinAPIBox"
                          Grid.Row="1"
-                         Margin="0,25,0,20"/>
+                         Margin="0,25,0,20"
+                         LostFocus="BitcoinAPIBox_LostFocus"/>
                 <!--Row 1 End-->
                 
                 <!--Row 2 Start-->
@@ -171,7 +173,8 @@
                            FontSize="23"/>
                 <TextBox x:Name="LitecoinAPIBox"
                          Grid.Row="2"
-                         Margin="0,25,0,20"/>
+                         Margin="0,25,0,20"
+                         LostFocus="LitecoinAPIBox_LostFocus"/>
 
                 <!--Row 2 End-->
                 
@@ -183,7 +186,8 @@
                            FontSize="23"/>
                 <TextBox x:Name="DogecoinAPIBox"
                          Grid.Row="3"
-                         Margin="0,25,0,20"/>
+                         Margin="0,25,0,20"
+                         LostFocus="DogecoinAPIBox_LostFocus"/>
 
                 <!--Row 3 End-->
                 
@@ -203,8 +207,16 @@
                     
                 </toolkit:ListPicker>
 
-                    <!--Row 4 End-->
+                <!--Row 4 End-->
                 
+                <!--Row 5 Start-->
+                
+                <Button Name="SaveButton"
+                        Grid.Row="5"
+                        Content="Save"
+                        Margin="30,25,30,0"/>
+                
+                <!--Row 5 End-->
             </Grid>
 
 

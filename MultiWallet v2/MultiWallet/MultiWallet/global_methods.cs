@@ -68,8 +68,55 @@ namespace MultiWallet
         {
             // Save keys in isolated storage
 
-        }
+            IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
 
+            switch (network)
+            {
+                case "Bitcoin":
+                    if (!settings.Contains("Bitcoin"))
+                    {
+                        settings.Add("Bitcoin", apikey);
+                        settings.Save();
+                    }
+                    else
+                    {
+                        settings.Remove("Bitcoin");
+                        settings.Add("Bitcoin", apikey);
+                        settings.Save();
+                    }
+                    break;
+                case "Litecoin":
+                    if (!settings.Contains("Litecoin"))
+                    {
+                        settings.Add("Litecoin", apikey);
+                        settings.Save();
+                    }
+                    else
+                    {
+                        settings.Remove("Litecoin");
+                        settings.Add("Litecoin", apikey);
+                        settings.Save();
+                    }
+                    break;
+                case "Dogecoin":
+                    if (!settings.Contains("Dogecoin"))
+                    {
+                        settings.Add("Dogecoin", apikey);
+                        settings.Save();
+                    }
+                    else
+                    {
+                        settings.Remove("Dogecoin");
+                        settings.Add("Dogecoin", apikey);
+                        settings.Save();
+                    }
+                    break;
+
+                    
+            }
+
+        }
+        
         // Get Default Currency
         internal static string GetDefaultCurrency()
         {

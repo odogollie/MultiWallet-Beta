@@ -37,7 +37,9 @@ namespace MultiWallet
                 global_methods.SetDefaultCurrency("Bitcoin");
                 
                 HomeLoaded.Visibility = Visibility.Collapsed;
-                SettingsLoaded.Visibility = Visibility.Visible;  
+                SettingsLoaded.Visibility = Visibility.Visible;
+
+
             }
             else
             {
@@ -48,6 +50,8 @@ namespace MultiWallet
 
 
                 var blockioClient = new BlockIoClient(global_methods.ReadAPIKey(global_methods.GetDefaultCurrency()));
+
+                setBalance(global_methods.GetDefaultCurrency());
                 
                 // Change View to Home
 
@@ -60,9 +64,9 @@ namespace MultiWallet
 
         }
 
-       /* private void setBalance(string currencyOverride)
+        private async void setBalance(string currencyOverride)
         {
-            getBalance(global_methods.ReadAPIKey(global_methods.GetDefaultCurrency()));
+            
             string currency = global_methods.GetDefaultCurrency();
 
             // Check to see if currency override is different then default currency
@@ -70,8 +74,9 @@ namespace MultiWallet
             {
                 currency = currencyOverride;
             }
+            var blockioClient = new BlockIoClient(global_methods.ReadAPIKey(currency));
 
-            string balance = localBalance;
+            var balance = await blockioClient.GetBalance();
             // Get default currency from global methods
             switch (currency){
                 case "Bitcoin":
@@ -108,7 +113,7 @@ namespace MultiWallet
             {
                 localBalance = "error";
             }
-        } */
+        } 
 
         private static bool IsFirstLaunch()
         {
@@ -139,6 +144,21 @@ namespace MultiWallet
         private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+        }
+
+        private void BitcoinAPIBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LitecoinAPIBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DogecoinAPIBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+
         }
             
 
