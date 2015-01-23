@@ -146,9 +146,26 @@ namespace MultiWallet
             
         }
 
-        private void BitcoinAPIBox_LostFocus(object sender, RoutedEventArgs e)
+        private async void BitcoinAPIBox_LostFocus(object sender, RoutedEventArgs e)
         {
+            var blockClient = new BlockIoClient(BitcoinAPIBox.Text);
+            string balString = "";
 
+            try
+            {
+                var bal = await blockClient.GetBalance();
+                balString = bal.AvailableBalance.ToString();
+                
+            }
+            catch
+            {
+                balString = "error";
+                global_methods.DisplayMessage("Please try again!", "Invalid API Key");
+                
+            }
+
+            
+            
         }
 
         private void LitecoinAPIBox_LostFocus(object sender, RoutedEventArgs e)
@@ -159,6 +176,62 @@ namespace MultiWallet
         private void DogecoinAPIBox_LostFocus(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void SaveButton_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var bitClient = new BlockIoClient(BitcoinAPIBox.Text);
+            var liteClient = new BlockIoClient(LitecoinAPIBox.Text);
+            var dogeClient = new BlockIoClient(DogecoinAPIBox.Text);
+
+            bool bitPass = false;
+            bool litePass = false;
+            bool dogePass = false;
+
+
+            // Try Bitcoin
+
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+
+            // Try Litecoin
+
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+
+            // Try Dogecoin
+
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+
+            if (bitPass && litePass && dogePass)
+            {
+                global_methods.DisplayMessage("API Keys saved successfully!", "Saved!");
+
+                // change view for home view
+                SettingsLoaded.Visibility = Visibility.Collapsed;
+                HomeLoaded.Visibility = Visibility.Visible;
+                
+
+            }
         }
             
 

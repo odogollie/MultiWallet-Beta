@@ -214,7 +214,8 @@
                 <Button Name="SaveButton"
                         Grid.Row="5"
                         Content="Save"
-                        Margin="30,25,30,0"/>
+                        Margin="30,25,30,0"
+                        Tap="SaveButton_Tap"/>
                 
                 <!--Row 5 End-->
             </Grid>
