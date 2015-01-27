@@ -138,6 +138,7 @@ namespace MultiWallet
         internal static void SetDefaultCurrency(string defaultCurrency)
         {
             // Set isolated storage value of default currency
+            // Bitcoin, Litecoin, Dogecoin
 
             IsolatedStorageSettings CurrencySettings = IsolatedStorageSettings.ApplicationSettings;
 
