@@ -45,7 +45,7 @@
 
         <!--Start of Home Page-->
 
-        <Grid x:Name="HomeLoaded" Background="Black" Grid.RowSpan="2" Visibility="Visible">
+        <Grid x:Name="HomeLoaded" Background="Black" Grid.RowSpan="2" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -71,7 +71,7 @@
                     </Grid.RowDefinitions>
 
                     <toolkit:ListPicker x:Name="CurrencyPickerHome"
-                                    SelectionChanged="CurrencyPickerHome_SelectionChanged"
+                                    
                                     Grid.Row="0"
                                     >
                         <toolkit:ListPickerItem x:Name="one" Content="Bitcoin"/>
@@ -80,6 +80,7 @@
 
 
                     </toolkit:ListPicker>
+                    <!--SelectionChanged="CurrencyPickerHome_SelectionChanged"-->
 
                     <TextBlock x:Name="BalanceBlock"
                                Grid.Row="1"

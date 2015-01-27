@@ -55,9 +55,8 @@ namespace MultiWallet
                 // Get and Set Balances before changing to Home Screen
 
                 // get Deflaut Currency balance
-                // get balance for default currency (Passing APIKey for Default Currency
-
-
+                // get balance for default currency (Passing APIKey for Default Currency)
+                
                 var blockioClient = new BlockIoClient(global_methods.ReadAPIKey(global_methods.GetDefaultCurrency()));
 
                 setBalance(global_methods.GetDefaultCurrency());
@@ -67,21 +66,20 @@ namespace MultiWallet
                 SettingsLoaded.Visibility = Visibility.Collapsed;
                 HomeLoaded.Visibility = Visibility.Visible;
 
-                
-
-                
             }
             
 
         }
 
+        // Main Method for setting balance with default currency on app loading
         private void setBalance()
         {
-            //HomeLoadingBar.Visibility = Visibility.Visible;
+            HomeLoadingBar.Visibility = Visibility.Visible;
             setBalance(global_methods.GetDefaultCurrency());
-            //HomeLoadingBar.Visibility = Visibility.Collapsed;
+            HomeLoadingBar.Visibility = Visibility.Collapsed;
         }
 
+        // Helper to setBalance, also able to change currency when using the selection method
         private async void setBalance(string currencyOverride)
         {
             //HomeLoadingBar.Visibility = Visibility.Visible;
@@ -92,9 +90,11 @@ namespace MultiWallet
             {
                 currency = currencyOverride;
             }
+
             var blockioClient = new BlockIoClient(global_methods.ReadAPIKey(currency));
 
-            var balance = await blockioClient.GetBalance();
+            var getBalance = await blockioClient.GetBalance();
+            var balance = getBalance.AvailableBalance;
             // Get default currency from global methods
             switch (currency){
                 case "Bitcoin":
@@ -133,7 +133,7 @@ namespace MultiWallet
         }
 
         // Changed Currency on home page
-        private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        /*private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
             if (CurrencyPickerHome == null)
@@ -150,7 +150,7 @@ namespace MultiWallet
             
                 
 
-        }
+        }*/
 
 
         // Bitcoin API box lost focus, only used in first run settings page
