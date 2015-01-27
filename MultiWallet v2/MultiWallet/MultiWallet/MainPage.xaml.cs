@@ -82,7 +82,7 @@ namespace MultiWallet
         // Helper to setBalance, also able to change currency when using the selection method
         private async void setBalance(string currencyOverride)
         {
-            //HomeLoadingBar.Visibility = Visibility.Visible;
+            HomeLoadingBar.Visibility = Visibility.Visible;
             string currency = global_methods.GetDefaultCurrency();
 
             // Check to see if currency override is different then default currency
@@ -108,7 +108,7 @@ namespace MultiWallet
                     break;
             }
 
-            //HomeLoadingBar.Visibility = Visibility.Collapsed;
+            HomeLoadingBar.Visibility = Visibility.Collapsed;
             
             
         }
