@@ -68,6 +68,8 @@ namespace MultiWallet
                 HomeLoaded.Visibility = Visibility.Visible;
 
                 
+
+                
             }
             
 
@@ -75,12 +77,14 @@ namespace MultiWallet
 
         private void setBalance()
         {
+            //HomeLoadingBar.Visibility = Visibility.Visible;
             setBalance(global_methods.GetDefaultCurrency());
+            //HomeLoadingBar.Visibility = Visibility.Collapsed;
         }
 
         private async void setBalance(string currencyOverride)
         {
-            
+            //HomeLoadingBar.Visibility = Visibility.Visible;
             string currency = global_methods.GetDefaultCurrency();
 
             // Check to see if currency override is different then default currency
@@ -103,31 +107,11 @@ namespace MultiWallet
                     BalanceBlock.Text = balance + " Ð";
                     break;
             }
+
+            //HomeLoadingBar.Visibility = Visibility.Collapsed;
             
             
         }
-
-        /*private async void getBalance(string apiKey)
-        {
-            HttpClient client = new HttpClient();
-            string url = block_io.baseUrl + "get_balance/?api_key=" + apiKey;
-
-            try
-            {
-                string result = await client.GetStringAsync(url);
-
-
-                block_io_root apiData = JsonConvert.DeserializeObject<block_io_root>(result);
-
-
-                localBalance = apiData.data.available_balance;
-
-            }
-            catch
-            {
-                localBalance = "error";
-            }
-        } */
 
         // Check if first run
         private static bool IsFirstLaunch()
@@ -148,32 +132,22 @@ namespace MultiWallet
             }
         }
 
-        // Page Navigation service 
-        private void NavTo(string uri)
-        {
-            NavigationService.Navigate(new Uri(uri, UriKind.RelativeOrAbsolute));
-            
-        }
-
-
         // Changed Currency on home page
         private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
             if (CurrencyPickerHome == null)
                 setBalance();
-            else if (CurrencyPickerHome.SelectedIndex.Equals(0)){
 
-            }
+            else if (CurrencyPickerHome.SelectedIndex.Equals(0))
+                setBalance(defaultCurrencyArray[0]);
                 
-            else if (CurrencyPickerHome.SelectedIndex.Equals(1)){
-
-            }
+            else if (CurrencyPickerHome.SelectedIndex.Equals(1))
+                setBalance(defaultCurrencyArray[1]);
 
             else if (CurrencyPickerHome.SelectedIndex.Equals(2))
-            {
-
-            }
+                setBalance(defaultCurrencyArray[2]);
+            
                 
 
         }
