@@ -197,9 +197,10 @@
                            Grid.Row="4"
                            Margin="12,0,0,0"
                            FontSize="23"/>
-                <toolkit:ListPicker x:Name="DefaultListPicker"
+                <toolkit:ListPicker x:Name="SettingsListPicker"
                                     Grid.Row="4"
-                                    Margin="0,25,0,0">
+                                    Margin="0,25,0,0"
+                                    SelectionChanged="SettingsListPicker_SelectionChanged">
 
                     <toolkit:ListPickerItem x:Name="Doge" Content="Bitcoin"/>
                     <toolkit:ListPickerItem x:Name="Bit" Content="Litecoin"/>
