@@ -133,15 +133,15 @@ namespace MultiWallet
         }
 
         // Changed Currency on home page
-        /*private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            if (CurrencyPickerHome == null)
-                setBalance();
+            if (CurrencyPickerHome == null) ;
+            //setBalance();
 
             else if (CurrencyPickerHome.SelectedIndex.Equals(0))
                 setBalance(defaultCurrencyArray[0]);
-                
+
             else if (CurrencyPickerHome.SelectedIndex.Equals(1))
                 setBalance(defaultCurrencyArray[1]);
 
@@ -150,7 +150,7 @@ namespace MultiWallet
             
                 
 
-        }*/
+        }
 
 
         // Bitcoin API box lost focus, only used in first run settings page
