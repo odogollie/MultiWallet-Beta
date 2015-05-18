@@ -169,6 +169,13 @@ namespace MultiWallet
                 return 1;
         }
 
+        // Return array of 10 most recent transactions
+        internal static string RecentTransactions()
+        {
+
+            return "";
+        }
+
 
     }
 

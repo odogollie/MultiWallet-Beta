@@ -109,6 +109,11 @@ namespace MultiWallet
                     break;
             }
 
+            // Get QR code for default address
+            // TODO:
+            // Possibly save qr for offline access???
+            // 
+
             var blockioGet = await blockioClient.GetAddressByLabel("default");
             var defaultAdd = blockioGet.Value;
             string getQR = "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=" + defaultAdd;
@@ -143,7 +148,7 @@ namespace MultiWallet
         private void CurrencyPickerHome_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            if (CurrencyPickerHome == null) ;
+            if (CurrencyPickerHome == null);
             //setBalance();
 
             else if (CurrencyPickerHome.SelectedIndex.Equals(0))

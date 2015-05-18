@@ -85,7 +85,7 @@
                     <TextBlock x:Name="BalanceBlock"
                                Grid.Row="1"
                                FontSize="35"
-                               Text="฿"
+                               Text=""
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top"
                                Margin="0,10,0,10"
@@ -98,7 +98,7 @@
                            VerticalAlignment="Center" 
                            Width="200"
                            Height="200"
-                           Margin="0,10,0,10"
+                           Margin="0,0,0,0"
                            />
                     <TextBlock Grid.Row="3"
                                FontSize="28"
