@@ -158,6 +158,17 @@ namespace MultiWallet
 
         }
 
+        internal static int AreKeysSet()
+        {
+            IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+
+            if (!settings.Contains("Bitcoin"))
+                return 0;
+
+            else
+                return 1;
+        }
+
 
     }
 

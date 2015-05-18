@@ -12,6 +12,7 @@ using System.IO.IsolatedStorage;
 using BlockIo;
 using System.Net.Http;
 using Newtonsoft.Json;
+using System.Windows.Media.Imaging;
 
 
 namespace MultiWallet
@@ -19,7 +20,7 @@ namespace MultiWallet
     public partial class MainPage : PhoneApplicationPage
     {
         const string settingsAppLaunched = "appLaunched";
-        private string localBalance = "";
+        //private string localBalance = "";
 
         // Array set ups for default currency with list pickers
         private static string[] defaultBitcoin = {"Bitcoin","Litecoin","Dogecoin"};
@@ -36,7 +37,7 @@ namespace MultiWallet
 
             // Check to see if First Run
 
-            if (IsFirstLaunch())
+            if (IsFirstLaunch() || global_methods.AreKeysSet() == 0)
             {
                 global_methods.DisplayMessage("Please Set API Keys", "First Launch");
                 
@@ -107,6 +108,12 @@ namespace MultiWallet
                     BalanceBlock.Text = balance + " Ð";
                     break;
             }
+
+            var blockioGet = await blockioClient.GetAddressByLabel("default");
+            var defaultAdd = blockioGet.Value;
+            string getQR = "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=" + defaultAdd;
+
+            QRImage.Source = new BitmapImage(new Uri(getQR));
 
             HomeLoadingBar.Visibility = Visibility.Collapsed;
             
