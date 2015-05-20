@@ -138,12 +138,15 @@ namespace DogeWalletC
                 double doubleBal = Double.Parse(DogeapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
                 double unconBal = Double.Parse(DogeapiData.data.pending_received_balance);
+                if (bal.Length>9)
+                    DogecoinBalance.Text = bal.Substring(0, bal.Length - 9) + " Ð";
+                else
+                    DogecoinBalance.Text = bal + " Ð";
 
-                DogecoinBalance.Text = bal.Substring(0, bal.Length - 9) + " Ð";
                 DogeUnconfirmedBalance.Text = unconBal + " Ð";
 
                 // Set LocalAppSettings for Dogecoin Bal
-                setPreviousBal("PreviousDoge", bal.Substring(0, bal.Length - 9) + " Ð");
+                // setPreviousBal("PreviousDoge", bal.Substring(0, bal.Length - 9) + " Ð");
                 
             } 
             else if (net == "bit")
@@ -159,7 +162,7 @@ namespace DogeWalletC
 
                 // Set LocalAppSettings for Dogecoin Bal
 
-                setPreviousBal("PreviousBit", bal + " ฿");
+                //setPreviousBal("PreviousBit", bal + " ฿");
             }
             else if (net == "lite")
             {
@@ -168,12 +171,15 @@ namespace DogeWalletC
                 double doubleBal = Double.Parse(LiteapiData.data.available_balance);
                 string bal = String.Concat(doubleBal);
                 double unconBal = Double.Parse(LiteapiData.data.pending_received_balance);
-
-                LitecoinBalance.Text = bal.Substring(0, bal.Length - 5) + " Ł";
+                if (bal.Length > 5)
+                    LitecoinBalance.Text = bal.Substring(0, bal.Length - 9) + " Ł";
+                else
+                    LitecoinBalance.Text = bal + " Ł";
+                
                 LiteUnconfirmedBalance.Text = unconBal + " Ł";
 
                 // Set LocalAppSettings for Dogecoin Bal
-                setPreviousBal("PreviousLite", bal.Substring(0, bal.Length - 5) + " Ł");
+                // setPreviousBal("PreviousLite", bal.Substring(0, bal.Length - 5) + " Ł");
             }
         }
 
