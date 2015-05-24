@@ -44,7 +44,7 @@
                 <toolkit:ListPickerItem x:Name="Lite" Content="Litecoin"/>
             </toolkit:ListPicker>
             <TextBox Name="AmountBox"
-                     Margin="0,0,0,0"
+                     Margin="0,0,0,30"
                      HorizontalAlignment="Left" 
                      Height="auto" 
                      TextWrapping="Wrap" 
@@ -62,14 +62,14 @@
                      Text="" 
                      VerticalAlignment="Bottom" 
                      Width="456" 
-                     Margin="0,0,0,0"
+                     Margin="0,0,0,30"
                      GotFocus="AddressBox_GotFocus"
                      Grid.Row="2"
                      />
             <TextBox Name="PinBox"
                      HorizontalAlignment="Left" 
                      Height="72" 
-                     Margin="0,0,0,0" 
+                     Margin="0,0,0,30"
                      TextWrapping="Wrap"
                      Text="" 
                      VerticalAlignment="Bottom"
@@ -140,6 +140,15 @@
                          Grid.Row="4"
                          VerticalAlignment="Top"
                          />
+            <TextBlock Grid.Row="4"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"
+                       Text="Use a thrid party scanner to scan QR codes"
+                       TextWrapping="Wrap"
+                       
+                       
+                        />
 
 
         </Grid>

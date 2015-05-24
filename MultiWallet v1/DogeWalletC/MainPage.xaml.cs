@@ -136,13 +136,15 @@ namespace DogeWalletC
                 BlockDataResult DogeapiData = JsonConvert.DeserializeObject<BlockDataResult>(dogeresult);
 
                 double doubleBal = Double.Parse(DogeapiData.data.available_balance);
-                string bal = String.Concat(doubleBal);
+                string bal = doubleBal.ToString("F0");
                 double unconBal = Double.Parse(DogeapiData.data.pending_received_balance);
-                if (bal.Length>9)
+                /*if (bal.Length>9)
                     DogecoinBalance.Text = bal.Substring(0, bal.Length - 9) + " Ð";
-                else
-                    DogecoinBalance.Text = bal + " Ð";
+                else*/
 
+                // Set balance text on mainpage
+                DogecoinBalance.Text = bal + " Ð";
+                // Set unconfirmed balance on mainpage
                 DogeUnconfirmedBalance.Text = unconBal + " Ð";
 
                 // Set LocalAppSettings for Dogecoin Bal
@@ -154,7 +156,7 @@ namespace DogeWalletC
                 BlockDataResult BitapiData = JsonConvert.DeserializeObject<BlockDataResult>(bitresult);
 
                 double doubleBal = Double.Parse(BitapiData.data.available_balance);
-                string bal = String.Concat(doubleBal);
+                string bal = doubleBal.ToString("F6");
                 double unconBal = Double.Parse(BitapiData.data.pending_received_balance);
 
                 BitcoinBalance.Text = bal + " ฿";
@@ -169,12 +171,14 @@ namespace DogeWalletC
                 BlockDataResult LiteapiData = JsonConvert.DeserializeObject<BlockDataResult>(literesult);
 
                 double doubleBal = Double.Parse(LiteapiData.data.available_balance);
-                string bal = String.Concat(doubleBal);
+                string bal = doubleBal.ToString("F2");
                 double unconBal = Double.Parse(LiteapiData.data.pending_received_balance);
-                if (bal.Length > 5)
+                /*if (bal.Length > 5)
                     LitecoinBalance.Text = bal.Substring(0, bal.Length - 9) + " Ł";
-                else
-                    LitecoinBalance.Text = bal + " Ł";
+                else*/
+
+
+                LitecoinBalance.Text = bal + " Ł";
                 
                 LiteUnconfirmedBalance.Text = unconBal + " Ł";
 
