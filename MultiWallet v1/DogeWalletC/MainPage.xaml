@@ -78,6 +78,7 @@
                 FontSize="30"
                 Text="Unconfirmed:"
                 VerticalAlignment="Bottom"
+                Margin="0,0,0,20"
                 />
             <TextBlock
                 HorizontalAlignment="Left"
@@ -85,6 +86,7 @@
                 FontSize="30"
                 Text="Unconfirmed:"
                 VerticalAlignment="Bottom"
+                Margin="0,0,0,20"
                 />
             <TextBlock
                 HorizontalAlignment="Left"
@@ -92,6 +94,7 @@
                 FontSize="30"
                 Text="Unconfirmed:"
                 VerticalAlignment="Bottom"
+                Margin="0,0,0,20"
                 />
             <TextBlock x:Name="DogecoinBalance"
 				HorizontalAlignment="right"
@@ -105,7 +108,7 @@
 				Grid.Row="0"
 				VerticalAlignment='Bottom'
 				Text="0 Ð"
-				Margin="0,0,0,0"
+				Margin="0,0,0,20"
 				HorizontalAlignment="Right"
 				FontSize="30"
                        />
@@ -121,7 +124,7 @@
 				Grid.Row="1"
 				VerticalAlignment='Bottom'
 				Text="0 ฿"
-				Margin="0,0,0,0"
+				Margin="0,0,0,20"
 				HorizontalAlignment="Right"
 				FontSize="30"
                        />
@@ -137,7 +140,7 @@
 				Grid.Row="2"
 				VerticalAlignment='Bottom'
 				Text="0 Ł"
-				Margin="0,0,0,0"
+				Margin="0,0,0,20"
 				HorizontalAlignment="Right"
 				FontSize="30"
                        />
