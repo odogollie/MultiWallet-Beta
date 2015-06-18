@@ -58,12 +58,12 @@ namespace DogeWalletC
 
                 ReceiveAddressBox.Text = apiData.data.address;
 
-                //https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=%22dogecoin:DE74RH9n92bPH5gGTJSATAiwwyngCSqPVF%22
+                //https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example
 
                 // CAN USE DOGECHAIN QR API
                 // https://dogechain.info/api/v2/address/qrcode/DTXbfrYymxRakKPC56txP4w4bgD4CpcJdJ
 
-                string dogechainQR = "https://dogechain.info/api/v1/address/qrcode/" +
+                string dogechainQR = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
                     "{0}";
 
                 var address = apiData.data.address;

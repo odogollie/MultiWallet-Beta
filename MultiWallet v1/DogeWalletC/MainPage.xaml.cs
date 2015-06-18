@@ -148,7 +148,7 @@ namespace DogeWalletC
                 DogeUnconfirmedBalance.Text = unconBal + " Ð";
 
                 // Set LocalAppSettings for Dogecoin Bal
-                // setPreviousBal("PreviousDoge", bal.Substring(0, bal.Length - 9) + " Ð");
+                setPreviousBal("PreviousDoge", bal.Substring(0, bal.Length - 9) + " Ð");
                 
             } 
             else if (net == "bit")
@@ -164,7 +164,7 @@ namespace DogeWalletC
 
                 // Set LocalAppSettings for Dogecoin Bal
 
-                //setPreviousBal("PreviousBit", bal + " ฿");
+                setPreviousBal("PreviousBit", bal + " ฿");
             }
             else if (net == "lite")
             {
@@ -183,7 +183,7 @@ namespace DogeWalletC
                 LiteUnconfirmedBalance.Text = unconBal + " Ł";
 
                 // Set LocalAppSettings for Dogecoin Bal
-                // setPreviousBal("PreviousLite", bal.Substring(0, bal.Length - 5) + " Ł");
+                setPreviousBal("PreviousLite", bal.Substring(0, bal.Length - 5) + " Ł");
             }
         }
 
